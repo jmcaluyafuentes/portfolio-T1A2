@@ -1,0 +1,154 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #B3C8CF;
+    width: 100%;
+    min-height: 10vh;
+    padding: 1em;
+}
+
+/* logo */
+header > img {
+    width: 50px;
+}
+
+nav {
+    background: #F1EEDC;
+    width: 40vw;
+    height: 30px; /*temporary*/
+    
+}
+
+/* Flex all sections that are direct child of body*/
+main > section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#hero {
+    background: #E5DDC5;
+    height: 90vh;
+    flex-wrap: wrap;
+    padding: 150px 0;
+    gap: 20px;
+}
+
+#hero * {
+    width: 100%;
+    text-align: center;
+}
+
+/* Hello */
+#hero h1 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    
+}
+
+/* My name is John*/
+#hero h2 {
+    font-size: 2.2rem;
+    font-family: "Lato", sans-serif;
+}
+
+/* Full Stack Web Developer */
+#hero div p {
+    font-size: 1.2rem;
+}
+
+#hero > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 15px;
+}
+
+/* Profile photo */
+#hero img {
+    width: 330px;
+}
+
+#hero > div:nth-of-type(2) {
+    flex-wrap: wrap;
+}
+
+#hero div div {
+    width: 100%;
+    padding-top: 1rem;
+}
+
+#hero div div p {
+    padding: 5px;
+}
+
+/* section {
+    padding-top: 5vh;
+} */
+
+/* Media query for tablet */
+@media only screen and (min-width: 815px) {
+    header > img {
+        width: 90px;
+    }
+    #hero img {
+        width: 450px;
+    }
+    #hero h1 {
+        font-size: 3rem;
+        font-weight: 400;
+    }
+    #hero h2 {
+        font-size: 3.8rem;
+    }
+    #hero div p {
+        font-size: 2rem;
+    }
+    #hero div div {
+        display: flex;
+        justify-content: center;
+    }
+    #hero div div p {
+        width: 165px;
+    }
+}
+
+@media only screen and (min-width: 1366px) {
+    #hero img {
+        width: 600px;
+    }
+    #hero h1 {
+        font-size: 4rem;
+        font-weight: 400;
+    }
+    #hero h2 {
+        font-size: 5rem;
+    }
+    /* #hero div {
+        
+    } */
+    #hero div p {
+        font-size: 2.8rem;
+    }
+    #hero div div {
+        display: flex;
+        justify-content: center;
+        padding: 30px 30vw;
+    }
+    #hero div div p {
+        width: 210px;
+    }
+    
+}
