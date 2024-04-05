@@ -1,3 +1,9 @@
+:root {
+    --nav-padding: 1vh;
+    --logo-height: 8vh; /*Logo is responsive with viewport. Hero section height will also respond. Only change this variable in media query for larger screens.*/
+    /* transition: all 1s ease-in-out; */
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -8,24 +14,25 @@ body {
     font-family: sans-serif;
 }
 
+/*Header section contains logo and navigation menu component*/
 header {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
     background: #B3C8CF;
     width: 100%;
-    min-height: 10vh;
-    padding: 1em;
+    padding: var(--nav-padding); 
 }
 
-/* logo */
+/* Logo */
 header > img {
-    width: 50px;
+    height: var(--logo-height);
 }
 
+/* Navigation menu*/
 nav {
     background: #F1EEDC;
-    width: 40vw;
+    width: 40vw; /*temporary*/
     height: 30px; /*temporary*/
     
 }
@@ -37,12 +44,13 @@ main > section {
     align-items: center;
 }
 
+/*Hero section*/
 #hero {
-    background: #E5DDC5;
-    height: 90vh;
     flex-wrap: wrap;
-    padding: 150px 0;
-    gap: 20px;
+    /* gap: 20px; */
+    background: #E5DDC5;
+    height: calc(100vh - var(--logo-height) - (2 * var(--nav-padding)));
+    padding: 10vh 0; /*10rem*/
 }
 
 #hero * {
@@ -54,12 +62,11 @@ main > section {
 #hero h1 {
     font-size: 1.8rem;
     font-weight: 400;
-    
 }
 
 /* My name is John*/
 #hero h2 {
-    font-size: 2.2rem;
+    font-size: 2rem;
     font-family: "Lato", sans-serif;
 }
 
@@ -68,87 +75,90 @@ main > section {
     font-size: 1.2rem;
 }
 
-#hero > div {
+/* #hero > div {
     display: flex;
     justify-content: center;
-    align-items: center;
-    width: 100%;
     gap: 15px;
+} */
+
+#hero > div { /*:nth-of-type(2)*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding-top: 1rem;
 }
 
 /* Profile photo */
 #hero img {
-    width: 330px;
+    width: 70%;
+    /* max-width: 320px; */
 }
 
-#hero > div:nth-of-type(2) {
-    flex-wrap: wrap;
+#linkedin-github {
+    padding-top: 2rem;
 }
 
-#hero div div {
-    width: 100%;
-    padding-top: 1rem;
-}
-
-#hero div div p {
+#linkedin-github p {
     padding: 5px;
 }
 
-/* section {
-    padding-top: 5vh;
-} */
 
-/* Media query for tablet */
-@media only screen and (min-width: 815px) {
-    header > img {
-        width: 90px;
-    }
-    #hero img {
-        width: 450px;
-    }
+@media only screen and (min-width: 380px){
     #hero h1 {
-        font-size: 3rem;
-        font-weight: 400;
+        font-size: 2.2rem;
     }
     #hero h2 {
-        font-size: 3.8rem;
+        font-size: 2.4rem;
     }
     #hero div p {
-        font-size: 2rem;
+        font-size: 1.6rem;
     }
-    #hero div div {
+}
+
+/* Media query for tablet */
+@media only screen and (min-width: 568px){
+    #hero h1 {
+        font-size: 2.6rem;
+        font-weight: 200;
+    }
+    #hero h2 {
+        font-size: 2.8rem;
+    }
+    #hero div p {
+        font-size: 1.9rem;
+    }
+    #hero img {
+        max-width: 450px;
+    }
+    #linkedin-github {
         display: flex;
         justify-content: center;
     }
-    #hero div div p {
+    #linkedin-github p {
         width: 165px;
     }
 }
 
-@media only screen and (min-width: 1366px) {
-    #hero img {
-        width: 600px;
+@media only screen and (min-width: 1290px) {
+
+    #hero {
+        /* padding: 8rem 0 15rem; */
+        /* padding: 10vw 2vw 15vw; */
+        /* flex-direction: column; */
     }
+
     #hero h1 {
-        font-size: 4rem;
-        font-weight: 400;
+        text-align: left;
+        /* line-height: 200px; */
+        padding-left: 24rem;
+        /* height: 10rem; */
     }
-    #hero h2 {
-        font-size: 5rem;
+    #hero img {
+        /* width: 70vw; */
+        /* margin-left: 5rem; */
     }
-    /* #hero div {
-        
-    } */
-    #hero div p {
-        font-size: 2.8rem;
-    }
-    #hero div div {
-        display: flex;
-        justify-content: center;
-        padding: 30px 30vw;
-    }
-    #hero div div p {
-        width: 210px;
-    }
-    
+    #hero > div {
+        width: 30vw;
+    }    
 }
