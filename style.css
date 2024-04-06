@@ -1,7 +1,7 @@
+/*For all screen sizes, Hero Section height will adjust with respect to Header height. Their total height will fill the entire viewport height.*/
 :root {
     --nav-padding: 2vh;
-    --logo-height: 6vh; /*Logo is responsive with viewport. Hero section height will also respond. Only change this variable in media query for larger screens.*/
-    /* transition: all 1s ease-in-out; */
+    --logo-height: 6vh; 
 }
 
 * {
@@ -14,7 +14,7 @@ body {
     font-family: "Roboto", sans-serif;
 }
 
-/*Header section contains logo and navigation menu component*/
+/*Header section contains the logo and navigation menu component*/
 header {
     display: flex;
     justify-content: space-between;
@@ -34,19 +34,18 @@ nav {
     background: #F1EEDC;
     width: 40vw; /*temporary*/
     height: 30px; /*temporary*/
-    
 }
 
-/* Flex all sections that are direct child of body*/
+/* Flex all sections that are direct child of main element*/
 main > section {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 /*Hero section*/
 #hero {
-    flex-wrap: wrap;
     height: calc(100vh - var(--logo-height) - (2 * var(--nav-padding)));
     padding: 10vh 0;
 }
@@ -56,20 +55,26 @@ main > section {
     text-align: center;
 }
 
-/* Hello */
+/* Hello greetings*/
 #hero h1 {
     font-size: 1.8rem;
     font-weight: 400;
-    padding-bottom: 1rem;
     color: #787878;
+}
+
+#hero > div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: calc(1rem + 20px);
 }
 
 /* My name is John*/
 #hero h2 {
     font-size: 2rem;
-    padding: 1rem 0 0.5rem;
+    padding-bottom: 0.5rem;
     color: #282727;
-    
+
 }
 
 /* Full Stack Web Developer */
@@ -78,169 +83,108 @@ main > section {
     color: #414141;
 }
 
-#hero > div {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-}
-
 /* Profile photo */
 #hero img {
     width: 50%;
 }
 
 #linkedin-github {
-    padding-top: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 2rem;
 }
 
 #linkedin-github p {
-    font-size: 13px;
     width: 90px ;
-    padding: 4px;
-    margin-bottom: 7px;
-    border-radius: 30px;
     background: #8385ff;
     color: white;
+    font-size: 13px;
+    padding: 4px;
+    border-radius: 30px;
+    margin-bottom: 7px;
 }
 
-/* section:nth-child(2) {
+section:nth-child(2) {
     background: #DFF5FF;
     height: 100vh;
-} */
+}
 
-@media only screen and (min-width: 568px) {
-    #hero {
-        padding: 10vh 0;
-    }
+/* Responsiveness for tablet screens*/
+@media only screen and (min-width: 565px) {
     #hero h1 {
-        font-size: 2.4rem;
-        /* font-weight: 200; */
+        font-size: 2.0rem;
     }
     #hero h2 {
-        font-size: 3.2rem;
+        font-size: 2.3rem;
     }
     #hero h3 {
-        font-size: 1.7rem;
+        font-size: 1.4rem;
     }
     #hero img {
-        max-width: 420px;
+        max-width: 352px;
     }
     #linkedin-github {
-        justify-content: center;
         flex-direction: row;
+        justify-content: center;
     }
     #linkedin-github p {
-        font-size: 20px;
         width: 120px;
-        margin: 10px;
+        font-size: 15px;
         padding: 10px 20px;
-        /* border-radius: 30px; */
+        margin: 10px;
     }
 }
 
-@media only screen and (min-width: 1290px) {
+/*Responsiveness for laptop screens*/
+@media only screen and (min-width: 765px) {
+    #hero > div {
+        display: grid;
+        width: 95vw;
+        max-width: 745px;
+        max-height: 318px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 3fr;
+    } 
     #hero h1 {
-        font-size: 2.4rem;
         order: 2;
-    }
-    #hero h2 {
-        font-size: 3.4rem;
+        font-size: 2.2rem;
+        padding-top: 25px;
     }
     #hero img {
         grid-row: 1 / 3;
         width: 100%;
     }
-    #hero > div {
-        width: 60vw;
-        max-width: 868px;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 3fr;
-        align-items: center;
-    } 
     #hero div div {
         order: 3;
-    }
-    #hero h3 {
-        font-size: 1.9rem;
-    }   
-    #linkedin-github {
-        font-size: 0.5em;
-        padding-top: 60px;
-    }
-}
-
-@media only screen and (orientation: landscape) {
-    :root {
-        --nav-padding: 2vh;
-        --logo-height: 6vh; 
-    }
-    #hero h1 {
-        font-size: 2.4rem;
-        order: 2;
-    }
-    #hero h2 {
-        font-size: 3.4rem;
-    }
-    #hero img {
-        grid-row: 1 / 3;
-        width: 100%;
-    }
-    #hero > div {
-        width: 75vw;
-        max-width: 868px;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 3fr;
-        align-items: center;
-    } 
-    #hero div div {
-        order: 3;
-    }
-    #hero h3 {
-        font-size: 1.9rem;
-    }   
-    #linkedin-github {
-        font-size: 0.5em;
-        padding-top: 60px;
-    }
-}
-
-@media only screen and (orientation: landscape) and (max-height: 600px){
-    :root {
-        --nav-padding: 2vh;
-        --logo-height: 6vh; 
-    }
-    #hero {
-        padding: 0;
-    }
-    #hero h1 {
-        font-size: 2rem;
-        order: 2;
-        padding-bottom: 0;
     }
     #hero h2 {
         font-size: 2.7rem;
     }
-    #hero img {
-        grid-row: 1 / 4;
-        width: 90%;
-    }
-    #hero > div {
-        grid-template-rows: 1fr 4fr;
-    } 
-    #hero div div {
-        order: 3;
-    }
     #hero h3 {
-        font-size: 1.7rem;
+        font-size: 1.6rem;
     }   
     #linkedin-github {
-        font-size: 0.5em;
-        padding-top: 10px;
+        padding-top: 40px;
     }
 }
+
+/* Responsiveness for mobile phone landscape orientation */
+@media only screen and (orientation: landscape) and (max-height: 600px) {
+    #hero {
+        padding: 0;
+    }
+    #hero > div {
+        width: 650px;
+    } 
+    #hero h1 {
+        font-size: 1.8rem;
+    }
+    #hero h2 {
+        font-size: 2rem;
+    }
+    #hero h3 {
+        font-size: 1.2rem;
+    }   
+}
+
