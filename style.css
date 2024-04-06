@@ -1,52 +1,81 @@
-/*For all screen sizes, Hero Section height will adjust with respect to Header height. Their total height will fill the entire viewport height.*/
+/* Mobile-first design */
+/* For all screen sizes, Hero Section height will adjust with respect to Header height. Their total height will fill the entire viewport height. */
 :root {
-    --nav-padding: 2vh;
-    --logo-height: 6vh; 
+    /* --nav-padding: 2vh;
+    --logo-height: 6vh;  */
+    --font-color-1: #282727;
+    --font-color-2: #414141;
+    --font-color-3: #787878;
+    /* Mobile-first */
+    --font-size-mobile-1: 2rem;
+    --font-size-mobile-2: 1.8rem;
+    --font-size-mobile-3: 1.2rem;
+    /* Large mobile phone and tablet */
+    --font-size-tablet-1: 2.3rem;
+    --font-size-tablet-2: 2rem;
+    --font-size-tablet-3: 1.4rem;
+    /* laptop and desktop */
+    --font-size-laptop-1: 2.7rem;
+    --font-size-laptop-2: 2.2rem;
+    --font-size-laptop-3: 1.6rem;
 }
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    text-decoration: none;
 }
 
 body {
+    /* position: static; */
     font-family: "Roboto", sans-serif;
 }
 
-/*Header section contains the logo and navigation menu component*/
+/* Header section contains the logo and navigation menu component */
 header {
+    position: fixed;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #6AD4DD;
+    background: #b1b2fe;
     width: 100%;
-    padding: var(--nav-padding); 
+    /* padding: var(--nav-padding);  */
+    padding: 2vh;
 }
 
 /* Logo */
 header > img {
-    height: var(--logo-height);
+    /* height: var(--logo-height); */
+    height: 6vh;
 }
 
-/* Navigation menu*/
+/* Navigation menu */
 nav {
     background: #F1EEDC;
     width: 40vw; /*temporary*/
     height: 30px; /*temporary*/
 }
 
-/* Flex all sections that are direct child of main element*/
+/* Flex all sections that are direct child of main element */
 main > section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+main > section > * {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
 }
 
-/*Hero section*/
+/* Hero section */
 #hero {
-    height: calc(100vh - var(--logo-height) - (2 * var(--nav-padding)));
+    /* height: calc(100vh - var(--logo-height) - (2 * var(--nav-padding))); */
+    height: 100vh;
     padding: 10vh 0;
 }
 
@@ -55,32 +84,32 @@ main > section {
     text-align: center;
 }
 
-/* Hello greetings*/
+/* Hello greetings */
 #hero h1 {
-    font-size: 1.8rem;
+    font-size: var(--font-size-mobile-2);
     font-weight: 400;
-    color: #787878;
+    color: var(--font-color-3);
 }
 
 #hero > div {
-    display: flex;
+    /* display: flex;   >>> already defined in "main > section > * " above. 
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: center; */
     gap: calc(1rem + 20px);
 }
 
-/* My name is John*/
+/* My name is John */
 #hero h2 {
-    font-size: 2rem;
+    font-size: var(--font-size-mobile-1);
     padding-bottom: 0.5rem;
-    color: #282727;
+    color: var(--font-color-1);
 
 }
 
 /* Full Stack Web Developer */
 #hero h3 {
-    font-size: 1.2rem;
-    color: #414141;
+    font-size: var(--font-size-mobile-3);
+    color: var(--font-color-2);
 }
 
 /* Profile photo */
@@ -105,21 +134,54 @@ main > section {
     margin-bottom: 7px;
 }
 
-section:nth-child(2) {
+/* Projects section */
+#projects {
     background: #DFF5FF;
-    height: 100vh;
 }
 
-/* Responsiveness for tablet screens*/
+#projects * {
+    width: 100%;
+    text-align: center;
+    color: var(--font-color-2);
+}
+
+#projects h1 {
+    font-size: calc(var(--font-size-mobile-1) - 0.5em);
+    padding: 1rem;
+}
+
+.article-description {
+    margin-bottom: 1rem;
+}
+.article-description > p, a {
+    font-size: 1em;
+    padding: 1rem 2rem;
+}
+
+#projects h2 {
+    font-size: calc(var(--font-size-mobile-2) - 0.5em);
+}
+
+#projects img {
+    width: 90%;
+    /* margin: 1rem; */
+    border: 1px var(--font-color-2) solid;
+    border-radius: 2em;
+}
+
+
+/* Responsiveness for large mobile phone and tablet */
 @media only screen and (min-width: 565px) {
+
+    /* Hero section */
     #hero h1 {
-        font-size: 2.0rem;
+        font-size: var(--font-size-tablet-2);
     }
     #hero h2 {
-        font-size: 2.3rem;
+        font-size: var(--font-size-tablet-1);
     }
     #hero h3 {
-        font-size: 1.4rem;
+        font-size: var(--font-size-tablet-3);
     }
     #hero img {
         max-width: 352px;
@@ -134,10 +196,22 @@ section:nth-child(2) {
         padding: 10px 20px;
         margin: 10px;
     }
+
+    /* Project section */
+    #projects h1 {
+        font-size: calc(var(--font-size-tablet-1) - 0.5em);
+    }
+    
+    #projects h2 {
+        font-size: calc(var(--font-size-tablet-2) - 0.5em);
+    }
 }
 
-/*Responsiveness for laptop screens*/
-@media only screen and (min-width: 765px) {
+/* Responsiveness for laptop and desktop */
+@media only screen and (min-width: 850px) {
+
+    /* Hero section */
+    /* Utilize grid display to arrange elements in their desired arrangements */
     #hero > div {
         display: grid;
         width: 95vw;
@@ -167,9 +241,27 @@ section:nth-child(2) {
     #linkedin-github {
         padding-top: 40px;
     }
+
+    /* Projects section */
+    #projects p {
+        padding-left: 0;
+        padding-right: 3rem;
+    }
+    #projects h1 {
+        font-size: calc(var(--font-size-laptop-1) - 0.5em);
+    }
+    #projects h2 {
+        font-size: calc(var(--font-size-laptop-2) - 0.5em);
+    }
+    #projects > article > a {
+        flex: 1;
+    }
+    #projects > article > div {
+        flex: 2;
+    }
 }
 
-/* Responsiveness for mobile phone landscape orientation */
+/* Responsiveness for landscape orientation of mobile phone */
 @media only screen and (orientation: landscape) and (max-height: 600px) {
     #hero {
         padding: 0;
