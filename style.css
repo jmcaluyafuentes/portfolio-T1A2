@@ -104,7 +104,6 @@ nav {
 }
 
 .menu a {
-    /* color: var(--background-color-1); */
     color: white;
 }
 
@@ -174,7 +173,7 @@ main > section > * {
     padding-top: 2rem;
 }
 
-#github-linkedin p {
+#github-linkedin a {
     width: 150px ;
     font-size: 18px;
     padding: 6px;
@@ -182,56 +181,47 @@ main > section > * {
     margin-bottom: 9px;
 }
 
-#github-linkedin p:nth-of-type(1) {
+#github-linkedin a:nth-of-type(1) {
     background: var(--background-color-1);
     color: var(--font-color-1);
     border: 1px solid var(--background-color-3);
 }
 
-#github-linkedin p:nth-of-type(2) {
+#github-linkedin a:nth-of-type(2) {
     background: var(--background-color-3);
     color: white;
 }
 
 /* Projects section */
 #projects {
-    background: #DFF5FF;
+    background: var(--background-color-1);
 }
 
 #projects * {
     width: 100%;
-    text-align: center;
-    color: var(--font-color-2);
+    color: var(--font-color-1);
 }
 
 #projects h1 {
-    font-size: calc(var(--font-size-mobile-l) - 0.5em);
+    font-size: calc(var(--font-size-mobile-l));
     padding: 1rem;
 }
 
 #projects article {
-    background: #c4ebff;
-    margin: 0.3em 1em;
     border-radius: 1.5em;
-}
 
-.article-description {
-    margin-bottom: 1rem;
+}
+#projects h2 {
+    font-size: calc(var(--font-size-mobile-m) - 0.3em);
+    padding: 0 2rem;
 }
 .article-description > p, a {
     font-size: 1em;
     padding: 1rem 2rem;
 }
 
-#projects h2 {
-    font-size: calc(var(--font-size-mobile-m) - 0.5em);
-}
-
 #projects img {
-    width: 90%;
-    /* margin: 1rem; */
-    border: 1px var(--font-color-2) solid;
-    border-radius: 2em;
+    width: 100%;
 }
 
 
@@ -282,13 +272,13 @@ main > section > * {
         flex-direction: row;
         justify-content: center;
     }
-    #github-linkedin p {
+    #github-linkedin a {
         margin: 10px;
     }
 
     /* Project section */
     #projects h1 {
-        font-size: calc(var(--font-size-tablet-l) - 0.5em);
+        font-size: calc(var(--font-size-tablet-l));
     }
     
     #projects h2 {
@@ -332,21 +322,16 @@ main > section > * {
     }
 
     /* Projects section */
-    #projects p {
-        padding-left: 0;
-        padding-right: 3rem;
-    }
     #projects h1 {
-        font-size: calc(var(--font-size-laptop-l) - 0.5em);
+        font-size: calc(var(--font-size-laptop-l));
     }
     #projects h2 {
-        font-size: calc(var(--font-size-laptop-m) - 0.5em);
+        font-size: calc(var(--font-size-laptop-m) - 0.3em);
     }
-    #projects > article > a {
+    #projects article {
         flex: 1;
-    }
-    #projects > article > div {
-        flex: 2;
+        align-items: start;
+        height: 60vw;
     }
 }
 
