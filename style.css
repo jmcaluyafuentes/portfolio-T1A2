@@ -1,9 +1,9 @@
 /* Mobile-first design */
 /* For all screen sizes, Hero Section height will adjust with respect to Header height. Their total height will fill the entire viewport height. */
 :root {
-    --background-color-1: #FBF7FF;
-    --background-color-2: #928BB7;
-    --background-color-3: #5F5EC2;
+    --background-color-1: rgb(236, 246, 247);
+    --background-color-2: #cdccf3;
+    --background-color-3: #201dd4;
     --font-color-1: #282727;
     --font-color-2: #585858;
     --font-color-3: #787878;
@@ -39,10 +39,12 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: var(--background-color-2);
+    /* background: var(--background-color-2); */
+    background-image: linear-gradient(to bottom right, var(--background-color-2), var(--background-color-3));
     width: 100%;
     height: 60px;
-    padding: 1em;
+    padding: 0.5em;
+    /* box-shadow: 0 3px 7px #5e5e5f; */
 }
 
 /* Logo */
@@ -54,14 +56,14 @@ header > img {
 /* Hamburger icon for mobile screen */
 .hamburger-icon {
     position: absolute;
-    top: 10px;
+    top: 14px;
     right: 10px;
     z-index: 1;
 }
 
 .hamburger-icon i {
     font-size: 30px;
-    color: var(--font-color-1);
+    color: var(--background-color-1);
 }
 
 .hamburger-icon i:hover{
@@ -79,10 +81,14 @@ header > img {
     display: block;
 }
 
+.hamburger-toggle:checked ~ nav {
+    background-image: linear-gradient(to bottom right, var(--background-color-2), var(--background-color-3));
+}
+
 /* Navigation menu */
 nav {
     width: 100%;
-    background-color: var(--background-color-2);
+    /* background-color: var(--background-color-2); */
     justify-content: center;
     position: absolute;
     right: 0;
@@ -92,8 +98,9 @@ nav {
 .menu {
     text-align: center;
     text-transform: uppercase;
-    font-size: var(--font-size-mobile-m);
+    font-size: var(--font-size-mobile-s);
     padding: 10px;
+    /* box-shadow: 0 3px 7px #5e5e5f; */
     /*For mobile screen only, initially the menu is hidden. It will then appear if hamburger icon is clicked*/
     display: none; 
 }
@@ -115,7 +122,7 @@ main > section {
     align-items: center;
 }
 
-main > section > * {
+main > section > article, div {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -150,7 +157,7 @@ main > section > * {
 /* My name is John */
 #hero h2 {
     font-size: var(--font-size-mobile-l);
-    padding-bottom: 0.5rem;
+    /* padding-bottom: 0.3rem; */
     color: var(--font-color-1);
 
 }
@@ -194,36 +201,94 @@ main > section > * {
 
 /* Projects section */
 #projects {
-    background: var(--background-color-1);
+    background: var(--background-color-2);
 }
 
 #projects * {
     width: 100%;
-    color: var(--font-color-1);
+    color: black;
 }
 
 #projects h1 {
-    font-size: calc(var(--font-size-mobile-l));
-    padding: 1rem;
+    font-size: var(--font-size-mobile-l);
+    padding: 0.5rem;
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 8px;
+    /* background: var(--background-color-2); */
+    /* background-image: linear-gradient(to bottom right, var(--background-color-1), var(--background-color-2)); */
+    /* color: var(--font-color-1); */
+    text-transform: uppercase;
+    /* box-shadow: 0 3px 7px #5e5e5f; */
 }
 
 #projects article {
-    border-radius: 1.5em;
-
+    padding-top: 0.5rem;
 }
+
 #projects h2 {
     font-size: calc(var(--font-size-mobile-m) - 0.3em);
-    padding: 0 2rem;
+    padding: 0 0.5rem;
 }
+
 .article-description > p, a {
     font-size: 1em;
-    padding: 1rem 2rem;
+    padding: 0.5rem;
 }
 
 #projects img {
+    /* width: 100%; */
+    border-radius: 10px;
+}
+
+/* Skills section */
+#skills {
+    background: var(--background-color-1);
+}
+
+#skills {
+    width: 100%;
+    color: var(--font-color-2);
+}
+
+#skills h1 {
+    font-size: var(--font-size-mobile-l);
+    padding: 0.5rem;
+    /* background-image: linear-gradient(to bottom right, var(--background-color-1), var(--background-color-2)); */
+    color: var(--font-color-1);
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-underline-offset: 8px;
+    text-align: center;
     width: 100%;
 }
 
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    width: 100%;
+    padding: 1em;
+}
+
+.skills-container > div {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 10rem;
+    gap: 1em;
+}
+
+.skills-container div div {
+    width: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#skills img {
+    width: 2em;
+}
 
 /* Responsiveness for large mobile phone and tablet */
 @media only screen and (min-width: 565px) {
@@ -231,6 +296,10 @@ main > section > * {
     /* Navigation menu */
     header label {
         display: none;
+    }
+
+    header > img {
+        margin: 0 0.5em;
     }
 
     header nav {
@@ -243,6 +312,7 @@ main > section > * {
         display: inline-block;
         padding: 0;
         text-transform: none;
+        box-shadow: none;
     }
 
     .menu li {
@@ -254,16 +324,13 @@ main > section > * {
     .menu a {
         padding: 0 1em;
     }
-
+    
     /* Hero section */
-    #hero h1 {
+    #hero h1, h3 {
         font-size: var(--font-size-tablet-s);
     }
     #hero h2 {
         font-size: var(--font-size-tablet-l);
-    }
-    #hero h3 {
-        font-size: var(--font-size-tablet-s);
     }
     #hero img {
         max-width: 352px;
@@ -284,6 +351,15 @@ main > section > * {
     #projects h2 {
         font-size: calc(var(--font-size-tablet-m) - 0.5em);
     }
+    #projects img {
+        border-radius: 15px;
+    }
+
+    /* Skills section */
+    .skills-container {
+        flex-direction: row;
+        width: 80%;
+    }
 }
 
 /* Responsiveness for laptop and desktop */
@@ -299,9 +375,11 @@ main > section > * {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 3fr;
     } 
+    #hero h1, h3 {
+        font-size: var(--font-size-laptop-s);
+    }
     #hero h1 {
         order: 2;
-        font-size: var(--font-size-laptop-s);
         padding-top: 25px;
     }
     #hero img {
@@ -313,10 +391,7 @@ main > section > * {
     }
     #hero h2 {
         font-size: var(--font-size-laptop-l);
-    }
-    #hero h3 {
-        font-size: var(--font-size-laptop-s);
-    }   
+    } 
     #github-linkedin {
         padding-top: 40px;
     }
@@ -331,28 +406,26 @@ main > section > * {
     #projects article {
         flex: 1;
         align-items: start;
-        height: 60vw;
+        /* height: 55vw;
+        max-height: 860px; */
     }
 }
 
 /* Responsiveness for landscape orientation of mobile phone */
-@media only screen and (orientation: landscape) and (max-height: 600px) {
+@media only screen and (orientation: landscape) and (max-height: 500px) {
     /* Hero section */
     #hero {
         padding: 0;
     }
     #hero > div {
-        width: 550px;
+        width: 800px;
     } 
-    #hero h1 {
+    #hero h1, h3 {
         font-size: var(--font-size-mobile-s);
     }
     #hero h2 {
         font-size: var(--font-size-mobile-l);
     }
-    #hero h3 {
-        font-size: var(--font-size-mobile-s);
-    }  
     #hero img {
         width: 100%;
     }
@@ -364,6 +437,17 @@ main > section > * {
         font-size: 16px;
         padding: 5px;
         justify-self: center;
+    }
+    /* Projects section */
+    #projects h1 {
+        font-size: calc(var(--font-size-mobile-l));
+    }
+    #projects h2 {
+        font-size: calc(var(--font-size-mobile-m) - 0.3em);
+    }
+    /* Skills section */
+    #skills h1 {
+        font-size: calc(var(--font-size-mobile-l));
     }
 }
 
