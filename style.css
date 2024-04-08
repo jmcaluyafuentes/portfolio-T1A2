@@ -39,21 +39,25 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* background: var(--background-color-2); */
     background-image: linear-gradient(to bottom right, var(--background-color-2), var(--background-color-3));
     width: 100%;
     height: 60px;
     padding: 0.5em;
-    /* box-shadow: 0 3px 7px #5e5e5f; */
 }
 
 /* Logo */
-header > img {
-    height: 40px;
+header a img {
+    width: 40px;
+}
+
+header a {
     z-index: 1;
+    padding-top: 10px;
 }
 
 /* Hamburger icon for mobile screen */
+
+/* Hamburger icon is wrapped inside the label element.*/
 .hamburger-icon {
     position: absolute;
     top: 14px;
@@ -66,17 +70,12 @@ header > img {
     color: var(--background-color-1);
 }
 
-.hamburger-icon i:hover{
-    background-color: var(--color-hover);
-    border-radius: 4px;
-    color: var(--background-color-1);
-}
-
+/*Input checkbox (hidden) is linked to the label element. */
 .hamburger-toggle {
-    /*Caution: Position of this element is not declared. Once hidden, the positions of succeeding elements will adjust.*/
     display: none; 
 }
 
+/* When the hamburger icon is clicked (the checkbox is checked), we can target the ul element so that navigation menu will appear. */
 .hamburger-toggle:checked ~ nav ul {
     display: block;
 }
@@ -88,21 +87,19 @@ header > img {
 /* Navigation menu */
 nav {
     width: 100%;
-    /* background-color: var(--background-color-2); */
     justify-content: center;
     position: absolute;
     right: 0;
     top: 0;
 }
 
+/*For mobile screen only, initially the menu is hidden. It will then appear if hamburger icon is clicked*/
 .menu {
+    display: none; 
     text-align: center;
     text-transform: uppercase;
     font-size: var(--font-size-mobile-s);
     padding: 10px;
-    /* box-shadow: 0 3px 7px #5e5e5f; */
-    /*For mobile screen only, initially the menu is hidden. It will then appear if hamburger icon is clicked*/
-    display: none; 
 }
 
 .menu li {
@@ -148,18 +145,13 @@ main > section > article, div {
 }
 
 #hero > div {
-    /* display: flex;   >>> already defined in "main > section > * " above. 
-    flex-wrap: wrap;
-    justify-content: center; */
     gap: calc(1rem + 20px);
 }
 
 /* My name is John */
 #hero h2 {
     font-size: var(--font-size-mobile-l);
-    /* padding-bottom: 0.3rem; */
     color: var(--font-color-1);
-
 }
 
 /* Full Stack Web Developer */
@@ -199,6 +191,19 @@ main > section > article, div {
     color: white;
 }
 
+#github-linkedin a:nth-of-type(1):hover {
+    background: var(--background-color-3);
+    color: white;
+    box-shadow: 0 0 10px #4343ff;
+}
+
+#github-linkedin a:nth-of-type(2):hover {
+    background: var(--background-color-1);
+    color: var(--font-color-1);
+    border: 1px solid var(--background-color-3);
+    box-shadow: 0 0 10px #4343ff;
+}
+
 /* Projects section */
 #projects {
     background: var(--background-color-2);
@@ -215,11 +220,7 @@ main > section > article, div {
     text-align: center;
     text-decoration: underline;
     text-underline-offset: 8px;
-    /* background: var(--background-color-2); */
-    /* background-image: linear-gradient(to bottom right, var(--background-color-1), var(--background-color-2)); */
-    /* color: var(--font-color-1); */
     text-transform: uppercase;
-    /* box-shadow: 0 3px 7px #5e5e5f; */
 }
 
 #projects article {
@@ -228,16 +229,23 @@ main > section > article, div {
 
 #projects h2 {
     font-size: calc(var(--font-size-mobile-m) - 0.3em);
-    padding: 0 0.5rem;
+    padding: 0 0.2em;
 }
 
-.article-description > p, a {
+.article-description p, a {
     font-size: 1em;
-    padding: 0.5rem;
+    padding: 0.3em;
+}
+
+.article-description a {
+    text-decoration: underline;
+}
+
+.article-description a:hover {
+    color: blue;
 }
 
 #projects img {
-    /* width: 100%; */
     border-radius: 10px;
 }
 
@@ -254,7 +262,6 @@ main > section > article, div {
 #skills h1 {
     font-size: var(--font-size-mobile-l);
     padding: 0.5rem;
-    /* background-image: linear-gradient(to bottom right, var(--background-color-1), var(--background-color-2)); */
     color: var(--font-color-1);
     text-transform: uppercase;
     text-decoration: underline;
@@ -350,7 +357,14 @@ main > section > article, div {
     
     #projects h2 {
         font-size: calc(var(--font-size-tablet-m) - 0.5em);
+        padding: 0 0.4em;
     }
+
+    .article-description p, a {
+        font-size: 1.1em;
+        padding: 0.5em;
+    }
+
     #projects img {
         border-radius: 15px;
     }
@@ -406,8 +420,6 @@ main > section > article, div {
     #projects article {
         flex: 1;
         align-items: start;
-        /* height: 55vw;
-        max-height: 860px; */
     }
 }
 
