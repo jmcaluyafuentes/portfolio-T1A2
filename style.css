@@ -2,7 +2,7 @@
 /* For all screen sizes, Hero Section height will adjust with respect to Header height. Their total height will fill the entire viewport height. */
 :root {
     --background-color-1: rgb(236, 246, 247);
-    --background-color-2: #cdccf3;
+    --background-color-2: #e8e8f8;
     --background-color-3: #201dd4;
     --font-color-1: #282727;
     --font-color-2: #585858;
@@ -11,7 +11,7 @@
     --font-size-mobile-l: 2rem;
     --font-size-mobile-m: 1.8rem;
     --font-size-mobile-s: 1.2rem;
-    /* Large mobile phone and tablet */
+    /* Tablet */
     --font-size-tablet-l: 2.3rem;
     --font-size-tablet-m: 2rem;
     --font-size-tablet-s: 1.4rem;
@@ -32,32 +32,32 @@ body {
     font-family: "Poppins", sans-serif;
 }
 
-/* Header section contains the logo and navigation menu component */
+/* Header section contains the logo and navigation menu */
 header {
     position: sticky;
     top: 0;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    background-image: linear-gradient(to bottom right, var(--background-color-2), var(--background-color-3));
     width: 100%;
     height: 60px;
     padding: 0.5em;
+    background-image: linear-gradient(to bottom right, var(--background-color-2), var(--background-color-3));
 }
 
 /* Logo */
+header a {
+    z-index: 1;
+    padding-top: 0.75em;
+    /* color: white; */
+}
+
 header a img {
     width: 40px;
 }
 
-header a {
-    z-index: 1;
-    padding-top: 10px;
-}
-
 /* Hamburger icon for mobile screen */
 
-/* Hamburger icon is wrapped inside the label element.*/
+/* Hamburger icon is wrapped inside the label element. */
 .hamburger-icon {
     position: absolute;
     top: 14px;
@@ -70,12 +70,12 @@ header a {
     color: var(--background-color-1);
 }
 
-/*Input checkbox (hidden) is linked to the label element. */
+/* Input element with type checkbox (hidden) is linked to the label element. */
 .hamburger-toggle {
     display: none; 
 }
 
-/* When the hamburger icon is clicked (the checkbox is checked), we can target the ul element so that navigation menu will appear. */
+/* Once the hamburger icon is clicked (the checkbox is then checked), we can target the ul element so that navigation menu will appear. */
 .hamburger-toggle:checked ~ nav ul {
     display: block;
 }
@@ -85,6 +85,7 @@ header a {
 }
 
 /* Navigation menu */
+/*For mobile screen, initially the menu is hidden. It will then appear if hamburger icon is clicked*/
 nav {
     width: 100%;
     justify-content: center;
@@ -93,25 +94,54 @@ nav {
     top: 0;
 }
 
-/*For mobile screen only, initially the menu is hidden. It will then appear if hamburger icon is clicked*/
 .menu {
     display: none; 
     text-align: center;
     text-transform: uppercase;
     font-size: var(--font-size-mobile-s);
-    padding: 10px;
+    padding: 0.6em;
 }
 
 .menu li {
     list-style: none;
-    padding: 2px 0;
+    padding: 0.1em 0;
 }
 
 .menu a {
     color: white;
 }
 
-/* Flex all sections that are direct child of main element */
+/* Responsiveness for tablet */
+@media only screen and (min-width: 565px) {
+
+    /* Hides the hamburger menu starting at tablet screen */
+    header label {
+        display: none;
+    }
+
+    nav {
+        position: relative;
+        display: flex;
+        justify-content: right;
+    }
+
+    .menu {
+        display: inline-block;
+        padding: 0;
+        text-transform: none;
+    }
+
+    .menu li {
+        float: left;
+        font-size: 1rem;
+    }
+
+    .menu a {
+        padding: 0 1em;
+    }
+}
+
+/* Flex all sections that are direct children of main element */
 main > section {
     display: flex;
     flex-wrap: wrap;
@@ -119,6 +149,7 @@ main > section {
     align-items: center;
 }
 
+/* Flex all containers that are children of children of main element */
 main > section > article, div {
     display: flex;
     justify-content: center;
@@ -129,7 +160,6 @@ main > section > article, div {
 /* Hero section */
 #hero {
     height: calc(100vh - 60px);
-    /* padding: 10vh 0 25vh; */
 }
 
 #hero * {
@@ -138,14 +168,16 @@ main > section > article, div {
 }
 
 /* Hello greetings */
-#hero h1 {
+#hero h1, h3 {
     font-size: var(--font-size-mobile-s);
-    font-weight: 400;
+}
+
+#hero h1 {
     color: var(--font-color-3);
 }
 
 #hero > div {
-    gap: calc(1rem + 20px);
+    gap: 2.5rem;
 }
 
 /* My name is John */
@@ -156,7 +188,6 @@ main > section > article, div {
 
 /* Full Stack Web Developer */
 #hero h3 {
-    font-size: var(--font-size-mobile-s);
     color: var(--font-color-2);
 }
 
@@ -168,16 +199,15 @@ main > section > article, div {
 #github-linkedin {
     display: flex;
     flex-direction: column;
-    align-items: center;
     padding-top: 2rem;
 }
 
 #github-linkedin a {
-    width: 150px ;
-    font-size: 18px;
-    padding: 6px;
-    border-radius: 30px;
-    margin-bottom: 9px;
+    width: 8em;
+    font-size: 1.1em;
+    padding: 0.3em;
+    border-radius: 1.5em;
+    margin: 0.3em;
 }
 
 #github-linkedin a:nth-of-type(1) {
@@ -186,15 +216,15 @@ main > section > article, div {
     border: 1px solid var(--background-color-3);
 }
 
-#github-linkedin a:nth-of-type(2) {
-    background: var(--background-color-3);
-    color: white;
-}
-
 #github-linkedin a:nth-of-type(1):hover {
     background: var(--background-color-3);
     color: white;
     box-shadow: 0 0 10px #4343ff;
+}
+
+#github-linkedin a:nth-of-type(2) {
+    background: var(--background-color-3);
+    color: white;
 }
 
 #github-linkedin a:nth-of-type(2):hover {
@@ -204,6 +234,78 @@ main > section > article, div {
     box-shadow: 0 0 10px #4343ff;
 }
 
+/* Responsiveness for tablet */
+@media only screen and (min-width: 565px) {
+    #hero h1, h3 {
+        font-size: var(--font-size-tablet-s);
+    }
+    #hero h2 {
+        font-size: var(--font-size-tablet-l);
+    }
+    #hero img {
+        max-width: 352px;
+    }
+    #github-linkedin {
+        flex-direction: row;
+    }
+}
+
+/* Responsiveness for laptop and desktop */
+@media only screen and (min-width: 850px) {
+
+    /* Utilize grid display to arrange elements in desired layout */
+    #hero > div {
+        display: grid;
+        width: 95vw;
+        max-width: 745px;
+        max-height: 318px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 3fr;
+        justify-items: center;
+    } 
+    #hero h1, h3 {
+        font-size: var(--font-size-laptop-s);
+    }
+    #hero h1 {
+        order: 2;
+        padding-top: 1em;
+    }
+    #hero img {
+        grid-row: 1 / 3;
+        width: 90%;
+    }
+    #hero > div > div {
+        order: 3;
+    }
+    #hero h2 {
+        font-size: var(--font-size-laptop-l);
+    } 
+}
+
+/* Responsiveness for landscape orientation of mobile phone */
+@media only screen and (orientation: landscape) and (max-height: 500px) {
+    #hero h1, h3 {
+        font-size: var(--font-size-mobile-s);
+    }
+    #hero h2 {
+        font-size: var(--font-size-mobile-l);
+    }
+    #hero img {
+        width: 85%;
+    }
+}
+
+/* Class selector of section-title is applicable to all h1 elements except in hero section */
+.section-title {
+    font-size: var(--font-size-mobile-l);
+    padding: 1.2rem;
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 8px;
+    text-transform: uppercase;
+    width: 100%;
+}
+
 /* Projects section */
 #projects {
     background: var(--background-color-2);
@@ -211,20 +313,6 @@ main > section > article, div {
 
 #projects * {
     width: 100%;
-    color: black;
-}
-
-#projects h1 {
-    font-size: var(--font-size-mobile-l);
-    padding: 0.5rem;
-    text-align: center;
-    text-decoration: underline;
-    text-underline-offset: 8px;
-    text-transform: uppercase;
-}
-
-#projects article {
-    padding-top: 0.5rem;
 }
 
 #projects h2 {
@@ -246,115 +334,28 @@ main > section > article, div {
 }
 
 #projects img {
-    border-radius: 10px;
+    width: 95%;
+    border-radius: 1em;
 }
 
-/* Skills section */
-#skills {
-    background: var(--background-color-1);
+#projects div article {
+    border: 1px var(--font-color-2) solid;
+    border-radius: 1.2em;
+    padding: 0.2em;
+    margin: 0 0.5em 1.5em;
 }
 
-#skills {
-    width: 100%;
-    color: var(--font-color-2);
-}
-
-#skills h1 {
-    font-size: var(--font-size-mobile-l);
-    padding: 0.5rem;
-    color: var(--font-color-1);
-    text-transform: uppercase;
-    text-decoration: underline;
-    text-underline-offset: 8px;
-    text-align: center;
-    width: 100%;
-}
-
-.skills-container {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5em;
-    width: 100%;
-    padding: 1em;
-}
-
-.skills-container > div {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    width: 10rem;
-    gap: 1em;
-}
-
-.skills-container div div {
-    width: 3em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#skills img {
-    width: 2em;
-}
-
-/* Responsiveness for large mobile phone and tablet */
+/* Responsiveness for tablet */
 @media only screen and (min-width: 565px) {
-
-    /* Navigation menu */
-    header label {
-        display: none;
-    }
-
-    header > img {
-        margin: 0 0.5em;
-    }
-
-    header nav {
-        position: relative;
-        display: flex;
-        justify-content: right;
-    }
-
-    .menu {
-        display: inline-block;
-        padding: 0;
-        text-transform: none;
-        box-shadow: none;
-    }
-
-    .menu li {
-        float: left;
-        padding: 0;
-        font-size: 1rem;
-    }
-
-    .menu a {
-        padding: 0 1em;
-    }
-    
-    /* Hero section */
-    #hero h1, h3 {
-        font-size: var(--font-size-tablet-s);
-    }
-    #hero h2 {
+    /* Class selector section-title also applies to other sections except the hero section */
+    .section-title {
         font-size: var(--font-size-tablet-l);
     }
-    #hero img {
-        max-width: 352px;
-    }
-    #github-linkedin {
-        flex-direction: row;
-        justify-content: center;
-    }
-    #github-linkedin a {
-        margin: 10px;
+    
+    #projects div article {
+        flex: 1;
     }
 
-    /* Project section */
-    #projects h1 {
-        font-size: calc(var(--font-size-tablet-l));
-    }
-    
     #projects h2 {
         font-size: calc(var(--font-size-tablet-m) - 0.5em);
         padding: 0 0.4em;
@@ -364,102 +365,61 @@ main > section > article, div {
         font-size: 1.1em;
         padding: 0.5em;
     }
-
-    #projects img {
-        border-radius: 15px;
-    }
-
-    /* Skills section */
-    .skills-container {
-        flex-direction: row;
-        width: 80%;
-    }
 }
 
 /* Responsiveness for laptop and desktop */
 @media only screen and (min-width: 850px) {
-
-    /* Hero section */
-    /* Utilize grid display to arrange elements in their desired arrangements */
-    #hero > div {
-        display: grid;
-        width: 95vw;
-        max-width: 745px;
-        max-height: 318px;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 3fr;
-    } 
-    #hero h1, h3 {
-        font-size: var(--font-size-laptop-s);
-    }
-    #hero h1 {
-        order: 2;
-        padding-top: 25px;
-    }
-    #hero img {
-        grid-row: 1 / 3;
-        width: 90%;
-    }
-    #hero div div {
-        order: 3;
-    }
-    #hero h2 {
-        font-size: var(--font-size-laptop-l);
-    } 
-    #github-linkedin {
-        padding-top: 40px;
+    
+    /* Class selector section-title also applies to other sections except the hero section */
+    .section-title {
+        font-size: calc(var(--font-size-laptop-l) - 0.2em);
     }
 
-    /* Projects section */
-    #projects h1 {
-        font-size: calc(var(--font-size-laptop-l));
-    }
     #projects h2 {
-        font-size: calc(var(--font-size-laptop-m) - 0.3em);
+        font-size: calc(var(--font-size-laptop-m) - 0.5em);
     }
-    #projects article {
-        flex: 1;
-        align-items: start;
+
+    #projects div {
+        max-width: 850px;
+        padding: 1em;
+    }
+    #projects div article {
+        margin: 1em;
     }
 }
 
 /* Responsiveness for landscape orientation of mobile phone */
 @media only screen and (orientation: landscape) and (max-height: 500px) {
-    /* Hero section */
-    #hero {
-        padding: 0;
-    }
-    #hero > div {
-        width: 800px;
-    } 
-    #hero h1, h3 {
-        font-size: var(--font-size-mobile-s);
-    }
-    #hero h2 {
-        font-size: var(--font-size-mobile-l);
-    }
-    #hero img {
-        width: 100%;
-    }
-    #github-linkedin{
-        padding-top: 26px;
-    }
-    #github-linkedin p {
-        width: 110px ;
-        font-size: 16px;
-        padding: 5px;
-        justify-self: center;
-    }
-    /* Projects section */
-    #projects h1 {
+    
+    /* Class selector section-title also applies to other sections except the hero section */
+    .section-title {
         font-size: calc(var(--font-size-mobile-l));
     }
+
     #projects h2 {
         font-size: calc(var(--font-size-mobile-m) - 0.3em);
     }
-    /* Skills section */
-    #skills h1 {
-        font-size: calc(var(--font-size-mobile-l));
-    }
+}
+
+/* Skills section */
+#skills {
+    color: black;
+    background: var(--background-color-1);
+}
+
+.skills-container {
+    gap: 0.5em;
+    padding: 0 1em 2em;
+}
+
+.skills-container > div {
+    display: flex;
+    justify-content: flex-start;
+    width: 10rem;
+    gap: 1em;
+}
+
+#skills img {
+    width: 2em;
 }
 
