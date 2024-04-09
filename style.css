@@ -308,7 +308,8 @@ main > section > article, div {
 
 /* <<< Projects section >>> */
 #projects {
-    background: #e4e4fc;
+    /* background: #e4e4fc; */
+    background-image: linear-gradient(to bottom right, white, #c6c6f7);
 }
 
 #projects * {
@@ -352,7 +353,7 @@ main > section > article, div {
     border-radius: 1.2em;
     padding: 0.5em 0.1em;
     margin: 0.7rem 1.5em;
-    background-image: linear-gradient(to bottom right, white, #adf8ff);
+    background-image: linear-gradient(to bottom right, white, #c9f5f9);
     box-shadow: 0 0 6px 0 blue;;
 }
 
@@ -494,6 +495,19 @@ main > section > article, div {
 
 .contact-info p {
     padding: 0 1em;
+    color: black;
+}
+
+.contact1 {
+    height: calc(100vh - 120px) !important;
+}
+
+.contact1 h1 {
+    align-self: self-end;
+}
+
+.contact1 > div {
+    align-self: self-start;
 }
 
 /* Responsiveness for laptop and desktop */
