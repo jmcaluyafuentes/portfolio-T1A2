@@ -212,7 +212,7 @@ main > section > article, div {
 
 #github-linkedin a:nth-of-type(1) {
     background: var(--background-color-1);
-    color: var(--font-color-1);
+    color: blue;
     border: 1px solid var(--background-color-3);
 }
 
@@ -229,7 +229,7 @@ main > section > article, div {
 
 #github-linkedin a:nth-of-type(2):hover {
     background: var(--background-color-1);
-    color: var(--font-color-1);
+    color: blue;
     border: 1px solid var(--background-color-3);
     box-shadow: 0 0 10px #4343ff;
 }
@@ -300,19 +300,23 @@ main > section > article, div {
     font-size: var(--font-size-mobile-l);
     padding: 1.2rem;
     text-align: center;
-    text-decoration: underline;
-    text-underline-offset: 8px;
+    /* text-decoration: underline; */
+    /* text-underline-offset: 8px; */
     text-transform: uppercase;
     width: 100%;
 }
 
 /* <<< Projects section >>> */
 #projects {
-    background: #e0dffe;
+    background: #e4e4fc;
 }
 
 #projects * {
     width: 100%;
+}
+
+#projects h1 {
+    margin-bottom: 0.5em;
 }
 
 #projects h2 {
@@ -327,6 +331,7 @@ main > section > article, div {
 
 .article-description a {
     text-decoration: underline;
+    text-underline-offset: 5px;
     margin-bottom: 0.8em;
 }
 
@@ -339,11 +344,25 @@ main > section > article, div {
     border-radius: 1em;
 }
 
+#projects > div {
+    margin: 1.5rem 0;
+}
+
 #projects div article {
     border-radius: 1.2em;
-    padding: 1em 0.1em;
-    margin: 0 0.5em 1.5em;
+    padding: 0.5em 0.1em;
+    margin: 0.7rem 1.5em;
     background-image: linear-gradient(to bottom right, white, #adf8ff);
+    box-shadow: 0 0 6px 0 blue;;
+}
+
+.project-source {
+    display: flex;
+    flex-direction: row;
+}
+
+.project-source a {
+    flex: 1;
 }
 
 /* Responsiveness for tablet */
@@ -353,9 +372,10 @@ main > section > article, div {
     .section-title {
         font-size: var(--font-size-tablet-l);
     }
-    
+
     #projects div article {
-        flex: 1;
+        flex: 250px;
+        margin: 0.7rem 1rem;
     }
 
     #projects h2 {
@@ -408,12 +428,13 @@ main > section > article, div {
 /* <<< Skills section >>> */
 #skills {
     background: var(--background-color-1);
-    padding: 3em 0.5em;
+    padding: 2em 0.5em;
 }
 
 .skills-container {
     gap: 0.5em;
     padding: 0 1em 2em;
+    margin-top: 1em;
 }
 
 .skills-container > div {
@@ -438,7 +459,7 @@ main > section > article, div {
 /* <<< Education Section >>> */
 
 #education {
-    padding: 3em 0.5em;
+    padding: 2em 0.5em;
 }
 
 #education img {
@@ -455,7 +476,7 @@ main > section > article, div {
 
 #contact {
     background: var(--background-color-1);
-    padding: 4em 0.5em;
+    padding: 2em 0.5em;
 }
 
 #contact img {
@@ -468,6 +489,7 @@ main > section > article, div {
     flex-direction: column;
     align-items: flex-start;
     gap: 0.5em;
+    margin: 1em 0 2em;
 }
 
 .contact-info p {
@@ -480,4 +502,12 @@ main > section > article, div {
     .contact-info {
         flex-direction: row;
     }   
+}
+
+footer {
+    text-align: center;
+    height: 60px;
+    background: black;
+    color: white;
+    padding: 18px;
 }
