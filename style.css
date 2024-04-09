@@ -347,6 +347,7 @@ main > section > article, div {
 
 /* Responsiveness for tablet */
 @media only screen and (min-width: 565px) {
+    
     /* Class selector section-title also applies to other sections except the hero section */
     .section-title {
         font-size: var(--font-size-tablet-l);
@@ -383,6 +384,7 @@ main > section > article, div {
         max-width: 850px;
         padding: 1em;
     }
+    
     #projects div article {
         margin: 1em;
     }
@@ -423,3 +425,10 @@ main > section > article, div {
     width: 2em;
 }
 
+/* Responsiveness for laptop and desktop */
+@media only screen and (min-width: 850px) {
+
+    .skills-container {
+        max-width: 850px;
+    }
+}
