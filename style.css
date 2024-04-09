@@ -1,7 +1,7 @@
 /* Mobile-first design */
 /* For all screen sizes, Hero Section height will adjust with respect to Header height. Their total height will fill the entire viewport height. */
 :root {
-    --background-color-1: rgb(236, 246, 247);
+    --background-color-1: #ecf6f7;
     --background-color-2: #e8e8f8;
     --background-color-3: #201dd4;
     --font-color-1: #282727;
@@ -32,7 +32,7 @@ body {
     font-family: "Poppins", sans-serif;
 }
 
-/* Header section contains the logo and navigation menu */
+/* <<< Header section >>> */
 header {
     position: sticky;
     top: 0;
@@ -157,7 +157,7 @@ main > section > article, div {
     flex-wrap: wrap;
 }
 
-/* Hero section */
+/* <<< Hero section >>> */
 #hero {
     height: calc(100vh - 60px);
 }
@@ -306,9 +306,9 @@ main > section > article, div {
     width: 100%;
 }
 
-/* Projects section */
+/* <<< Projects section >>> */
 #projects {
-    background: var(--background-color-2);
+    background: #e0dffe;
 }
 
 #projects * {
@@ -327,6 +327,7 @@ main > section > article, div {
 
 .article-description a {
     text-decoration: underline;
+    margin-bottom: 0.8em;
 }
 
 .article-description a:hover {
@@ -339,10 +340,10 @@ main > section > article, div {
 }
 
 #projects div article {
-    border: 1px var(--font-color-2) solid;
     border-radius: 1.2em;
-    padding: 0.2em;
+    padding: 1em 0.1em;
     margin: 0 0.5em 1.5em;
+    background-image: linear-gradient(to bottom right, white, #adf8ff);
 }
 
 /* Responsiveness for tablet */
@@ -387,6 +388,7 @@ main > section > article, div {
     
     #projects div article {
         margin: 1em;
+        border-radius: 1.8rem;
     }
 }
 
@@ -403,10 +405,10 @@ main > section > article, div {
     }
 }
 
-/* Skills section */
+/* <<< Skills section >>> */
 #skills {
-    color: black;
     background: var(--background-color-1);
+    padding: 3em 0.5em;
 }
 
 .skills-container {
@@ -431,4 +433,51 @@ main > section > article, div {
     .skills-container {
         max-width: 850px;
     }
+}
+
+/* <<< Education Section >>> */
+
+#education {
+    padding: 3em 0.5em;
+}
+
+#education img {
+    width: 6.5em;
+}
+
+.education-info div div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* <<< Contact Section >>> */
+
+#contact {
+    background: var(--background-color-1);
+    padding: 4em 0.5em;
+}
+
+#contact img {
+    width: 2em;
+    border-radius: 0.5em;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5em;
+}
+
+.contact-info p {
+    padding: 0 1em;
+}
+
+/* Responsiveness for laptop and desktop */
+@media only screen and (min-width: 850px) {
+
+    .contact-info {
+        flex-direction: row;
+    }   
 }
