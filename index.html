@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>John Fuentes Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <!-- Google font for Poppins -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
@@ -35,10 +35,14 @@
     </header>
     <main>
         <!-- Hero section -->
-        <section id="hero" >
+        <section class="home hero">
             <div>
-                <h1><em>hello, I'm</em></h1> <!-- Hello greeting -->
-                <img src="./images/profile-photo.png" alt="profile photo"> <!-- Profile photo -->
+                <!-- Introduction -->
+                <h1><em>hello, I'm</em></h1>
+
+                <!-- Profile photo -->
+                <img src="./images/profile-photo.png" alt="profile photo"> 
+                
                 <div>
                     <h2>John Fuentes</h2>
                     <h3>Full Stack Web Developer</h3>
@@ -51,32 +55,42 @@
         </section>
 
         <!-- Projects section -->
-        <section id="projects">
+        <section class="home projects">
             <div>
                 <h1 class="section-title">Projects</h1>
-                <article>
-                    <div class="article-description">    
+                <article class="project">
+                    <div class="description">    
                         <h2>Band Website</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, possimus.</p>
-                        <a href="https://john-fuentes-band-challenge.netlify.app/" target="_black"><em>See website</em></a>
+                        <div class="img-container">
+                            <a href="https://john-fuentes-band-challenge.netlify.app/" target="_black"><img src="./images/project-1.png" alt="band website"></a>
+                        </div>
+                        <div class="project-source">
+                            <a href="https://john-fuentes-band-challenge.netlify.app/" target="_black"><em>Website</em></a>
+                            <a href="https://github.com/jmcaluyafuentes/CA_ed_exercises/tree/master/01_intro_to_HTML/band-challenge-final" target="_black"><em>Github</em></a>
+                        </div>
                     </div>
-                    <a href="https://john-fuentes-band-challenge.netlify.app/" target="_black"><img src="./images/project-1.png" alt="band website"></a>
                 </article>
-                <article>
-                    <div class="article-description">    
-                        <h2>Puppy Animation</h2>
+                <article class="project">
+                    <div class="description">    
+                        <h2>Animation</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, voluptas.</p>
-                        <a href="https://john-fuentes-animation-lesson.netlify.app/" target="_black"><em>See website</em></a>
+                        <div class="img-container">  
+                            <a href="https://john-fuentes-animation-lesson.netlify.app/" target="_black"><img src="./images/project-2.png" alt="puppy animation website"></a>
+                        </div>  
+                        <div class="project-source">   
+                            <a href="https://john-fuentes-animation-lesson.netlify.app/" target="_black"><em>Website</em></a>
+                            <a href="https://github.com/jmcaluyafuentes/CA_ed_exercises/tree/master/05_effects_and_animation/effects--animations-challenge" target="_black"><em>Github</em></a>
+                        </div> 
                     </div>
-                    <a href="https://john-fuentes-animation-lesson.netlify.app/" target="_black"><img src="./images/project-2.png" alt="puppy animation website"></a>
                 </article>
             </div>
         </section>
 
         <!-- Skills section -->
-        <section id="skills">
+        <section class="home skills">
             <h1 class="section-title">Skills</h1>
-            <div class="skills-container">
+            <div class="skills-list">
                 <div>
                     <img src="./images/icon-git.png" alt="Git icon">
                     <p>Git</p>
@@ -111,8 +125,9 @@
                 </div>
             </div>
         </section>
+
         <!-- Education section -->
-        <section id="education">
+        <section class="home education">
             <h1 class="section-title">Education</h1>
             <div class="education-info">
                 <div>
@@ -124,8 +139,9 @@
                 </div>
             </div>
         </section>
+
         <!-- Contact section -->
-        <section id="contact">
+        <section class="home contact">
             <h1 class="section-title">Get In Touch</h1>
             <div class="contact-info">
                 <div>
@@ -143,8 +159,10 @@
             </div>
         </section>
     </main>
+
+    <!-- Footer section -->
     <footer>
-        <p>Copyright <span>©</span> John Fuentes 2024 </p> 
+        <p><span>©</span> John Fuentes 2024 </p> 
     </footer>
 </body>
 </html>
