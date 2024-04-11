@@ -372,10 +372,16 @@ section p {
     border-radius: 1em;
 }
 
+
+
+
 /* ### For Projects page ### */
-.projects-page article {
+/* .projects-page article {
     max-width: 340px;
-}
+} */
+
+
+
 
 /* Responsiveness for tablet viewport width */
 @media only screen and (min-width: 565px) {
@@ -411,15 +417,21 @@ section p {
         border-radius: 1.8rem;
     }
 
+
+
+
     /* For Projects Page */
-    .projects-page div {
+    /* .projects-page div {
         max-width: 90vw !important;
     }
 
     .projects-page article {
         flex: 400px !important;
         max-width: 400px;
-    }
+    } */
+
+
+
 }
 
 /* Responsiveness for landscape orientation of mobile phone */
@@ -528,11 +540,12 @@ section p {
     align-self: self-start;
 }
 
-/* ### Pages: About, Blog ### */
+/* ### Pages: About, Blog, Projects ### */
 
 /* Make all section elements display grid */
 .about,
-.blogs {
+.blogs,
+.project-page {
     display: grid;
     margin: 0 auto;
     color: var(--font-color-1);
@@ -540,21 +553,24 @@ section p {
 
 /* This applies to all section's h1 */
 .about h1,
-.blogs h1 {
+.blogs h1,
+.project-page h1 {
     font-size: var(--font-size-mobile-l);
     margin-top: 1em;
     text-transform: uppercase;
     text-align: center;
 }
 
-.about h2 {
+.about h2,
+.project-page h2 {
     font-size: var(--font-size-mobile-m);
     margin-bottom: 0.5em;
     text-align: left;
 }
 
 .work, .school, .interest, 
-.blog {
+.blog,
+.project-name {
     display: flex;
     flex-direction: column;
     padding-top: 1em;
@@ -573,17 +589,18 @@ section p {
     text-align: left;
 }
 
-.img-interest img,
-.img-blog img {
+.img-interest img {
     width: 100%;
+}
+
+.img-blog img,
+.img-project img {
+    width: 100%;
+    padding-top: 1em;
 }
 
 .blog-list a:hover {
     color: red;
-}
-
-.img-blog img {
-    padding-top: 1em;
 }
 
 .blogs figcaption {
@@ -591,27 +608,57 @@ section p {
     padding: 0 0 1em;
 }
 
+.project-buttons {
+    display: flex;
+    gap: 1em;
+    
+}
+
+.project-buttons a {
+    width: 5em;
+    background: #201dd4;
+    color: white;
+    padding: 0.2em;
+    text-align: center;
+}
+
+.project-buttons a:hover {
+    background: rgb(0, 255, 255);
+    color: black;
+}
+
 /* Responsiveness for tablet viewport width */
 @media only screen and (min-width: 565px) {
 
     .about, 
-    .blogs {
+    .blogs,
+    .project-page {
         max-width: 850px;   
     }
     .about h1, 
-    .blogs h1 {
+    .blogs h1,
+    .project-page h1 {
         font-size: var(--font-size-tablet-l);
     }
     .about h2, 
-    .blogs h2 {
+    .blogs h2,
+    .project-page h2 {
         font-size: var(--font-size-tablet-m);
     }
 
     .work, .school, .interest, 
-    .blog {
+    .blog,
+    .project-name {
         margin: 1em;
     }
 
+    .project-name {
+        border: 3px solid var(--font-color-3);
+        padding: 1em;
+        border-radius: 1em;
+    }
+
+    /* Grid layout for Work History section in About page */
     .works {
         grid-template-columns: 1fr 1fr;
         grid-auto-rows: repeat(4, auto);
@@ -625,6 +672,7 @@ section p {
         grid-area: side;
     }
 
+    /* Grid layout for Education section in About page */
     .schools {
         grid-template-columns: 1fr 1fr;
         grid-auto-rows: repeat(2, auto);
@@ -636,6 +684,7 @@ section p {
         grid-area: side;
     }
 
+    /* Grid layout for Interest section in About page */
     .interests {
         grid-template-columns: 1fr 1fr;
         grid-auto-rows: repeat(3, auto);
@@ -652,17 +701,31 @@ section p {
         grid-area: bottom;
     }
 
+    /* Grid layout for Projects page */
+    .project-page {
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: repeat(3, auto);
+        grid-template-areas: "top top" 
+                            "middle middle"
+                            "bottom bottom";                       
+    }
+
+    .project-heading {
+        grid-area: top;
+    }
 }
 
 /* Responsiveness for laptop and desktop viewport width */
 @media only screen and (min-width: 850px) {
 
     .about h1, 
-    .blogs h1 {
+    .blogs h1,
+    .project-page h1 {
         font-size: var(--font-size-laptop-l);
     }
     .about h2, 
-    .blogs h2 {
+    .blogs h2,
+    .project-page h2 {
         font-size: var(--font-size-laptop-m);
     }
 }
