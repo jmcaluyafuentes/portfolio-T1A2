@@ -509,7 +509,8 @@ section p {
 }
 
 .contact-info {
-    justify-content: center;
+    justify-content: center; 
+    align-items: center;
     flex-wrap: wrap;
     width: 100%;
     gap: 0.5em;
@@ -519,7 +520,10 @@ section p {
 .contact-info p {
     align-content: center;
     padding: 0 1em;
-    color: black;
+}
+
+.contact-info a:hover {
+    color: blue;
 }
 
 .contact-info img {
