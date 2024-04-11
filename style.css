@@ -528,25 +528,33 @@ section p {
     align-self: self-start;
 }
 
-/* ### About page ### */
+/* ### Pages: About, Blog ### */
 
 /* Make all section elements display grid */
-.about {
+.about,
+.blogs {
     display: grid;
-    max-width: 360px;
     margin: 0 auto;
     color: var(--font-color-1);
 }
 
 /* This applies to all section's h1 */
-.about h1 {
+.about h1,
+.blogs h1 {
     font-size: var(--font-size-mobile-l);
     margin-top: 1em;
     text-transform: uppercase;
     text-align: center;
 }
 
-.work, .school, .interest {
+.about h2 {
+    font-size: var(--font-size-mobile-m);
+    margin-bottom: 0.5em;
+    text-align: left;
+}
+
+.work, .school, .interest, 
+.blog {
     display: flex;
     flex-direction: column;
     padding-top: 1em;
@@ -554,13 +562,8 @@ section p {
     font-size: 1em;
 }
 
-.work h2, .school h2, .interest h2 {
-    font-size: var(--font-size-mobile-m);
-    margin-bottom: 0.5em;
-    text-align: left;
-}
-
-ul {
+.work ul, 
+.blog-list ul {
     padding: 1em 0 0 2em;
 }
 
@@ -569,24 +572,38 @@ ul {
     text-align: left;
 }
 
-.img-interest img {
+.img-interest img,
+.img-blog img {
     width: 100%;
+}
+
+.img-blog img {
+    padding-top: 1em;
+}
+
+.blogs figcaption {
+    font-size: 0.8em;
+    padding: 0 0 1em;
 }
 
 /* Responsiveness for tablet viewport width */
 @media only screen and (min-width: 565px) {
 
-    .about {
+    .about, 
+    .blogs {
         max-width: 850px;   
     }
-    .about h1 {
+    .about h1, 
+    .blogs h1 {
         font-size: var(--font-size-tablet-l);
     }
-    .about h2 {
+    .about h2, 
+    .blogs h2 {
         font-size: var(--font-size-tablet-m);
     }
 
-    .work, .school, .interest {
+    .work, .school, .interest, 
+    .blog {
         margin: 1em;
     }
 
@@ -635,10 +652,12 @@ ul {
 /* Responsiveness for laptop and desktop viewport width */
 @media only screen and (min-width: 850px) {
 
-    .about h1 {
+    .about h1, 
+    .blogs h1 {
         font-size: var(--font-size-laptop-l);
     }
-    .about h2 {
+    .about h2, 
+    .blogs h2 {
         font-size: var(--font-size-laptop-m);
     }
 }
