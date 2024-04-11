@@ -48,7 +48,6 @@ header {
 header a {
     z-index: 1;
     padding-top: 0.45em;
-    /* color: white; */
 }
 
 header a img {
@@ -190,6 +189,7 @@ nav {
 
 .hero h3 {
     color: var(--font-color-2);
+    /* line-height: 1; */
 }
 
 /* Profile photo */
@@ -372,16 +372,10 @@ section p {
     border-radius: 1em;
 }
 
-
-
-
-/* ### For Projects page ### */
-/* .projects-page article {
-    max-width: 340px;
-} */
-
-
-
+.projects > div > a {
+    text-decoration: underline;
+    margin: 0.8em 0 0;
+}
 
 /* Responsiveness for tablet viewport width */
 @media only screen and (min-width: 565px) {
@@ -397,6 +391,9 @@ section p {
         flex: 250px;
         margin: 0.7rem 1rem;
     }
+    .projects div {
+        max-width: 720px;
+    }
 }
 
 /* Responsiveness for laptop and desktop */
@@ -409,29 +406,9 @@ section p {
     .projects h2 {
         font-size: var(--font-size-laptop-m)
     }
-    .projects div {
-        max-width: 850px;
-    }
     .project {
-
         border-radius: 1.8rem;
     }
-
-
-
-
-    /* For Projects Page */
-    /* .projects-page div {
-        max-width: 90vw !important;
-    }
-
-    .projects-page article {
-        flex: 400px !important;
-        max-width: 400px;
-    } */
-
-
-
 }
 
 /* Responsiveness for landscape orientation of mobile phone */
