@@ -34,9 +34,9 @@ For my website, I want the greetings "Hello, I'm" goes first before the profile 
 
 ### 2.1.1 Home Page
 
-![Wireframe for mobile viewport width](./markdown-images/viewport-mobile1.jpg)
+![Wireframe for mobile viewport width](./markdown-images/wireframe-mobile1.jpg)
 
-![Wireframe for mobile viewport width](./markdown-images/viewport-mobile2.jpg)
+![Wireframe for mobile viewport width](./markdown-images/wireframe-mobile2.jpg)
 
 When a user visits my website, they will see right away who I am (Name and Photo) and what I do (Full Stack Web Developer). Below it are buttons for my Github and LinkedIn profiles should they want to check my activities.
 
