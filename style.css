@@ -518,6 +518,7 @@ section p {
     display: grid;
     max-width: 360px;
     margin: 0 auto;
+    color: var(--font-color-1);
 }
 
 /* This applies to all section's h1 */
@@ -547,7 +548,7 @@ ul {
 }
 
 .school h3 {
-    font-size: var(--font-size-mobile-s);
+    font-size: calc(var(--font-size-mobile-s) - 0.15em);
     text-align: left;
 }
 
