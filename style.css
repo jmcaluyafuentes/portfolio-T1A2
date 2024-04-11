@@ -565,6 +565,7 @@ section p {
 .work ul, 
 .blog-list ul {
     padding: 1em 0 0 2em;
+    text-decoration: underline;
 }
 
 .school h3 {
@@ -575,6 +576,10 @@ section p {
 .img-interest img,
 .img-blog img {
     width: 100%;
+}
+
+.blog-list a:hover {
+    color: red;
 }
 
 .img-blog img {
