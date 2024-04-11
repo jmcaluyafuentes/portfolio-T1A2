@@ -216,7 +216,7 @@ nav {
 #github-linkedin a:nth-of-type(1), 
 #github-linkedin a:nth-of-type(1):visited, 
 #resume-linkedIn a:nth-of-type(1),
-#resume-linkedIn a:nth-of-type(1):visited {
+#resume-linkedIn a:nth-of-type(1) {
     background: var(--background-color-1);
     color: blue;
     border: 1px solid var(--background-color-3);
@@ -229,8 +229,8 @@ nav {
     box-shadow: 0 0 10px #4343ff;
 }
 
-#github-linkedin a:nth-of-type(2), 
-#github-linkedin a:nth-of-type(2):visited,
+#github-linkedin a:nth-of-type(2),
+#github-linkedin a:nth-of-type(2):visited, 
 #resume-linkedIn a:nth-of-type(2),
 #resume-linkedIn a:nth-of-type(2):visited {
     background: var(--background-color-3);
@@ -247,8 +247,9 @@ nav {
 
 #resume-linkedIn {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
     margin-bottom: 2rem;
 }
 
@@ -264,6 +265,9 @@ nav {
         max-width: 352px;
     }
     #github-linkedin {
+        flex-direction: row;
+    }
+    #resume-linkedIn {
         flex-direction: row;
     }
 }
@@ -590,23 +594,27 @@ section p {
     margin-top: 0.5em;
 }
 
-.blogs figcaption {
-    font-size: 0.8em;
-    padding: 0 0 1em;
+.blogs figcaption,
+.img-interest figcaption {
+    font-size: 0.9em;
+    padding: 0 0 0.3em;
 }
 
 .project-buttons {
     display: flex;
-    gap: 1em;
-    
+    gap: 0.7em;
+    margin-top: 2em;
 }
 
 .project-buttons a {
-    width: 5em;
-    background: #201dd4;
+    width: 8em;
+    background-image: linear-gradient(to bottom right, var(--background-color-2), var(--background-color-3));
     color: white;
-    padding: 0.2em;
+    padding: 0.5em 1em;
     text-align: center;
+    border-radius: 1em;
+    font-size: 0.8em;
+    
 }
 
 .project-buttons a:hover {
