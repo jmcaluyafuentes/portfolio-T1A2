@@ -197,12 +197,14 @@ nav {
     width: 50%;
 }
 
-#github-linkedin {
+#github-linkedin, 
+#resume-linkedIn {
     flex-direction: column;
     padding-top: 2rem;
 }
 
-#github-linkedin a {
+#github-linkedin a, 
+#resume-linkedIn a {
     width: 8em;
     font-size: 1.1em;
     text-align: center;
@@ -211,28 +213,43 @@ nav {
     margin: 0.3em;
 }
 
-#github-linkedin a:nth-of-type(1), #github-linkedin a:nth-of-type(1):visited {
+#github-linkedin a:nth-of-type(1), 
+#github-linkedin a:nth-of-type(1):visited, 
+#resume-linkedIn a:nth-of-type(1),
+#resume-linkedIn a:nth-of-type(1):visited {
     background: var(--background-color-1);
     color: blue;
     border: 1px solid var(--background-color-3);
 }
 
-#github-linkedin a:nth-of-type(1):hover {
+#github-linkedin a:nth-of-type(1):hover,
+#resume-linkedIn a:nth-of-type(1):hover {
     background: var(--background-color-3);
     color: white;
     box-shadow: 0 0 10px #4343ff;
 }
 
-#github-linkedin a:nth-of-type(2), #github-linkedin a:nth-of-type(2):visited {
+#github-linkedin a:nth-of-type(2), 
+#github-linkedin a:nth-of-type(2):visited,
+#resume-linkedIn a:nth-of-type(2),
+#resume-linkedIn a:nth-of-type(2):visited {
     background: var(--background-color-3);
     color: white;
 }
 
-#github-linkedin a:nth-of-type(2):hover {
+#github-linkedin a:nth-of-type(2):hover,
+#resume-linkedIn a:nth-of-type(2):hover  {
     background: var(--background-color-1);
     color: blue;
     border: 1px solid var(--background-color-3);
     box-shadow: 0 0 10px #4343ff;
+}
+
+#resume-linkedIn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 2rem;
 }
 
 /* Responsiveness for tablet viewport width */
