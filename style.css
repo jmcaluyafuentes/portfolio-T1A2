@@ -354,12 +354,12 @@ section p {
     padding: 0.3em;
 }
 
-.description a {
+.projects a {
     text-decoration: underline;
     margin: 0 0.5em;
 }
 
-.description a:hover {
+.projects a:hover {
     color: blue;
 }
 
@@ -373,7 +373,6 @@ section p {
 }
 
 .projects > div > a {
-    text-decoration: underline;
     margin: 0.8em 0 0;
 }
 
@@ -580,8 +579,15 @@ section p {
     padding-top: 1em;
 }
 
-.blog-list a:hover {
+.blog-list a:hover,
+.blogs a:hover {
     color: red;
+}
+
+.blog a {
+    background: var(--background-color-2);
+    padding: 0.5em;
+    margin-top: 0.5em;
 }
 
 .blogs figcaption {
