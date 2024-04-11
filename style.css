@@ -655,7 +655,7 @@ section p {
     .project-name {
         border: 3px solid var(--font-color-3);
         padding: 1em;
-        border-radius: 1em;
+        border-radius: 2em;
     }
 
     /* Grid layout for Work History section in About page */
