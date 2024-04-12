@@ -578,7 +578,7 @@ section p {
 }
 
 .work ul, 
-.blog-list ul {
+.blog-list{
     padding: 1em 0 0 2em;
     text-decoration: underline;
 }
