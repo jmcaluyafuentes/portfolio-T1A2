@@ -116,6 +116,10 @@ nav {
     color: white;
 }
 
+.menu a:hover {
+    color: yellow;
+}
+
 /* Responsiveness for tablet viewport width */
 @media only screen and (min-width: 565px) {
 
