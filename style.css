@@ -52,7 +52,6 @@ header {
 
 .logo img {
     width: 40px;
-    transition: width 0.5s ease;
 }
 
 .logo img:hover {
