@@ -15,10 +15,10 @@
     --font-size-tablet-l: 2.3rem;
     --font-size-tablet-m: 1.7rem;
     --font-size-tablet-s: 1.4rem;
-    /* laptop and desktop */
-    --font-size-laptop-l: 2.7rem;
-    --font-size-laptop-m: 1.9rem;
-    --font-size-laptop-s: 1.6rem;
+    /* Desktop */
+    --font-size-desktop-l: 2.7rem;
+    --font-size-desktop-m: 1.9rem;
+    --font-size-desktop-s: 1.6rem;
 }
 
 * {
@@ -45,13 +45,18 @@ header {
 }
 
 /* Logo */
-header a {
+.logo {
     z-index: 1;
     padding-top: 0.45em;
 }
 
-header a img {
+.logo img {
     width: 40px;
+    transition: width 0.5s ease;
+}
+
+.logo img:hover {
+    width: 45px;
 }
 
 /* Hamburger icon for mobile screen */
@@ -272,7 +277,7 @@ nav {
     }
 }
 
-/* Responsiveness for laptop and desktop viewport width */
+/* Responsiveness for desktop viewport width */
 @media only screen and (min-width: 850px) {
 
     /* Utilize grid display to arrange elements in desired layout */
@@ -297,10 +302,10 @@ nav {
         order: 3;
     }
     .hero h1, h3 {
-        font-size: var(--font-size-laptop-s);
+        font-size: var(--font-size-desktop-s);
     }
     .hero h2 {
-        font-size: var(--font-size-laptop-l);
+        font-size: var(--font-size-desktop-l);
     }
 }
 
@@ -399,15 +404,15 @@ section p {
     }
 }
 
-/* Responsiveness for laptop and desktop */
+/* Responsiveness for desktop */
 @media only screen and (min-width: 850px) {
     
     /* Class selector 'section-title' also applies to other sections except the hero section */
     .section-title {
-        font-size: calc(var(--font-size-laptop-l) - 0.2em);
+        font-size: calc(var(--font-size-desktop-l) - 0.2em);
     }
     .projects h2 {
-        font-size: var(--font-size-laptop-m)
+        font-size: var(--font-size-desktop-m)
     }
     .project {
         border-radius: 1.8rem;
@@ -450,7 +455,7 @@ section p {
     width: 2em;
 }
 
-/* Responsiveness for laptop and desktop viewport width */
+/* Responsiveness for desktop viewport width */
 @media only screen and (min-width: 850px) {
 
     .skills-list {
@@ -710,18 +715,18 @@ section p {
     }
 }
 
-/* Responsiveness for laptop and desktop viewport width */
+/* Responsiveness for desktop viewport width */
 @media only screen and (min-width: 850px) {
 
     .about h1, 
     .blogs h1,
     .project-page h1 {
-        font-size: var(--font-size-laptop-l);
+        font-size: var(--font-size-desktop-l);
     }
     .about h2, 
     .blogs h2,
     .project-page h2 {
-        font-size: var(--font-size-laptop-m);
+        font-size: var(--font-size-desktop-m);
     }
 }
 
