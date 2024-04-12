@@ -62,14 +62,16 @@ header {
 /* Hamburger icon for mobile screen */
 
 /* Hamburger icon is wrapped inside the label tags. */
-.hamburger-icon {
+.hamburger-icon,
+.close-icon {
     position: absolute;
     top: 14px;
     right: 10px;
     z-index: 1;
 }
 
-.hamburger-icon i {
+.hamburger-icon i,
+.close-icon i {
     font-size: 30px;
     color: var(--background-color-1);
 }
@@ -86,6 +88,22 @@ header {
 
 .hamburger-toggle:checked ~ nav {
     background-image: linear-gradient(to bottom right, var(--background-color-2), var(--background-color-3));
+}
+
+.hamburger-toggle:checked ~ label .hamburger-icon {
+    display: none;
+}
+
+.hamburger-toggle:not(:checked) ~ label .hamburger-icon {
+    display: absolute;
+}
+
+.hamburger-toggle:checked ~ label .close-icon {
+    display: absolute;
+}
+
+.hamburger-toggle:not(:checked) ~ label .close-icon {
+    display: none;
 }
 
 /* Navigation menu */
