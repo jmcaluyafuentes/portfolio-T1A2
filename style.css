@@ -307,7 +307,7 @@ nav {
 }
 
 /* Responsiveness for desktop viewport width */
-@media only screen and (min-width: 850px) {
+@media only screen and (min-width: 760px) {
 
     /* Utilize grid display to arrange elements to the desired layout */
     .hero > div {
@@ -345,6 +345,12 @@ nav {
 
 /* Responsiveness for landscape orientation of mobile phone */
 @media only screen and (orientation: landscape) and (max-height: 500px) {
+    .hero > div {
+        width: 80%;
+        gap: 0;
+    }
+    
+    
     .hero h1, h3 {
         font-size: var(--font-size-mobile-s);
     }
