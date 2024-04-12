@@ -355,7 +355,7 @@ section p {
     padding: 1em;
     margin: 0.7rem 1.5em;
     background-image: linear-gradient(to bottom right, white, #c9f5f9);
-    box-shadow: 0 0.25em 2em 0 #00000026;
+    box-shadow: 0 0.25em 2em 0 var(--font-color-3);
 }
 
 .projects h2 {
@@ -381,12 +381,18 @@ section p {
     margin: 0.5em 0;
 }
 
-.project img {
+.img-container img {
     border-radius: 1em;
 }
 
-.projects > div > a {
+.img-container a {
     margin: 0.8em 0 0;
+}
+
+.img-container a:hover {
+    border: 2px solid black;
+    border-radius: 1em;
+    cursor: pointer;
 }
 
 /* Responsiveness for tablet viewport width */
@@ -597,7 +603,7 @@ section p {
     color: red;
 }
 
-.blog a {
+.back-to-top {
     background: var(--background-color-2);
     padding: 0.5em;
     margin-top: 0.5em;
