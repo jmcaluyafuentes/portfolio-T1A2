@@ -1,24 +1,24 @@
 /* Mobile-first design */
-/* For all screen sizes, Hero Section height will adjust with respect to Header height. Their total height will fill the entire viewport height. */
 :root {
-    --background-color-1: #ecf6f7;
-    --background-color-2: #e8e8f8;
-    --background-color-3: #201dd4;
-    --font-color-1: #282727;
-    --font-color-2: #585858;
-    --font-color-3: #787878;
-    /* Mobile-first */
+    /* For mobile screen */
     --font-size-mobile-l: 2rem;
     --font-size-mobile-m: 1.5rem;
     --font-size-mobile-s: 1.2rem;
-    /* Tablet */
+    /* For tablet screen*/
     --font-size-tablet-l: 2.3rem;
     --font-size-tablet-m: 1.7rem;
     --font-size-tablet-s: 1.4rem;
-    /* Desktop */
+    /* For desktop screen*/
     --font-size-desktop-l: 2.7rem;
     --font-size-desktop-m: 1.9rem;
     --font-size-desktop-s: 1.6rem;
+    /* Color options */
+    --font-color-1: #282727;
+    --font-color-2: #585858;
+    --font-color-3: #787878;
+    --background-color-1: #ecf6f7;
+    --background-color-2: #e8e8f8;
+    --background-color-3: #201dd4;
 }
 
 * {
@@ -32,7 +32,7 @@ body {
     font-family: "Poppins", sans-serif;
 }
 
-/* <<< Header section >>> */
+/* Header section for all pages */
 header {
     position: sticky;
     top: 0;
@@ -61,7 +61,7 @@ header {
 
 /* Hamburger icon for mobile screen */
 
-/* Hamburger icon is wrapped inside the label element. */
+/* Hamburger icon is wrapped inside the label tags. */
 .hamburger-icon {
     position: absolute;
     top: 14px;
@@ -74,12 +74,12 @@ header {
     color: var(--background-color-1);
 }
 
-/* Input element with type 'checkbox' (hidden) is linked to the label element. */
+/* Input tag with type 'checkbox' is linked to the label element. */
 .hamburger-toggle {
     display: none; 
 }
 
-/* Once the hamburger icon is clicked (it toggles the checkbox to "check" state), then we can target the ul element so that navigation menu will appear. */
+/* Once hamburger icon is clicked (checkbox becomes "check" state), then target the ul element to display the navigation menu. */
 .hamburger-toggle:checked ~ nav ul {
     display: block;
 }
@@ -90,7 +90,7 @@ header {
 
 /* Navigation menu */
 
-/*For mobile screen, initially the menu is hidden. It will then appear if hamburger icon is clicked*/
+/*For mobile screen, initially the menu is hidden. It will only appear if hamburger icon is clicked*/
 nav {
     width: 100%;
     justify-content: center;
@@ -151,6 +151,8 @@ nav {
     }
 }
 
+/* ### Home page ### */
+
 /* Flex all section elements */
 .home {
     display: flex;
@@ -181,7 +183,7 @@ nav {
     gap: 2.5rem;
 }
 
-/* h1 is the introduction, h3 is the role */
+/* h1 is the greetings, h3 is my web dev role */
 .hero h1, h3 {
     font-size: var(--font-size-mobile-s);
 }
@@ -190,7 +192,7 @@ nav {
     color: var(--font-color-3);
 }
 
-/* h2 is the my name */
+/* h2 is my complete name */
 .hero h2 {
     font-size: var(--font-size-mobile-l);
     color: var(--font-color-1);
@@ -198,7 +200,7 @@ nav {
 
 .hero h3 {
     color: var(--font-color-2);
-    /* line-height: 1; */
+    line-height: 1;
 }
 
 /* Profile photo */
@@ -206,6 +208,7 @@ nav {
     width: 50%;
 }
 
+/* For buttons in home page and about page */
 #github-linkedin, 
 #resume-linkedIn {
     flex-direction: column;
@@ -284,7 +287,7 @@ nav {
 /* Responsiveness for desktop viewport width */
 @media only screen and (min-width: 850px) {
 
-    /* Utilize grid display to arrange elements in desired layout */
+    /* Utilize grid display to arrange elements to the desired layout */
     .hero > div {
         display: grid;
         width: 95vw;
@@ -398,7 +401,6 @@ section p {
 /* Responsiveness for tablet viewport width */
 @media only screen and (min-width: 565px) {
     
-    /* Class selector 'section-title' also applies to other sections except the hero section */
     .section-title {
         font-size: var(--font-size-tablet-l);
     }
@@ -417,7 +419,6 @@ section p {
 /* Responsiveness for desktop */
 @media only screen and (min-width: 850px) {
     
-    /* Class selector 'section-title' also applies to other sections except the hero section */
     .section-title {
         font-size: calc(var(--font-size-desktop-l) - 0.2em);
     }
@@ -432,7 +433,6 @@ section p {
 /* Responsiveness for landscape orientation of mobile phone */
 @media only screen and (orientation: landscape) and (max-height: 500px) {
     
-    /* Class selector 'section-title' also applies to other sections except the hero section */
     .section-title {
         font-size: var(--font-size-mobile-l);
     }
@@ -512,7 +512,7 @@ section p {
     margin: 1em 0 2em;
 }
 
-.contact-info p {
+.contact-info address {
     align-content: center;
     padding: 0 1em;
 }
@@ -526,9 +526,9 @@ section p {
     border-radius: 0.5em;
 }
 
-/* ### For Contact Page ### */
+/* ### Contact Page ### */
 .contact-page {
-    height: calc(100vh - 120px) !important;
+    height: calc(100vh - 120px);
 }
 
 .contact-page h1 {
@@ -550,7 +550,6 @@ section p {
     color: var(--font-color-1);
 }
 
-/* This applies to all section's h1 */
 .about h1,
 .blogs h1,
 .project-page h1 {
@@ -567,7 +566,7 @@ section p {
     text-align: left;
 }
 
-.work, .school, .interest, 
+.about-sub,
 .blog,
 .project-name {
     display: flex;
@@ -580,6 +579,9 @@ section p {
 .work ul, 
 .blog-list{
     padding: 1em 0 0 2em;
+}
+
+.blog-list{
     text-decoration: underline;
 }
 
@@ -656,7 +658,7 @@ section p {
         font-size: var(--font-size-tablet-m);
     }
 
-    .work, .school, .interest, 
+    .about-sub, 
     .blog,
     .project-name {
         margin: 1em;
