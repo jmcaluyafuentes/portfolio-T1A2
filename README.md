@@ -208,4 +208,3 @@ The contact page is simple, contents are displayed at the center of page. A sema
 <img src="./markdown-images/screenshot-landscape.jpg" alt="Projects page in mobile, tablet and desktop screens" width="700px">
 
 I added  media query for landscape orientation of mobile screen in case they are using their phones in landscape mode at the time they viewed my website.
-
