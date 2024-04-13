@@ -187,7 +187,7 @@ Lastly, the footer section has black background and white texts to contrast the 
 
 Six projects are shown in the 'projects' page. I used the Ed challenges on this
 
-At the early stage of making the project, I used Flexbox to layout the home page. Later on, Matt gave us the opportunity to learn CSS Grid during the master class. So I used grid on the rest of pages (i.e., projects, blog, about) to layout the whole page and just used flex in each grid item when necessary. I saved time by using grid in contrast to using flexbox in home page.
+At the early stage of making the project, I used Flexbox to layout the home page. Later on, our educator Matt gave us the opportunity to learn CSS Grid during the master class. So after that, I used grid on the rest of pages (i.e., projects, blog, about) to layout the whole page and just used flex in each grid item when necessary. I saved time by using grid in contrast to using flexbox in home page.
 
 ### Blog Page
 
@@ -195,7 +195,7 @@ At the early stage of making the project, I used Flexbox to layout the home page
 
 Unlike the projects page, there is only one column in blog page as it is appropriate in reading purposes. On top of the page are the list of five blog titles and their published dates. Each title is linked to its blog post on the same page for easy navigation. Semantic time tags are used for the published date.
 
-In each blog post, semantic address tags are used in the author. Under each post has a link called "back to top" which is useful if the user wants to check again the list of titles.
+In each blog post, semantic tags are used in author, date and image using address, time and figure tags, respectively. Under each post has a link called "back to top" which is useful if the user wants to check again the list of titles at the beginning of the page.
 
 
 

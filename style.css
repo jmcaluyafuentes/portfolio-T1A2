@@ -350,7 +350,6 @@ nav {
         gap: 0;
     }
     
-    
     .hero h1, h3 {
         font-size: var(--font-size-mobile-s);
     }
@@ -436,6 +435,7 @@ section p {
 /* Responsiveness for tablet viewport width */
 @media only screen and (min-width: 565px) {
     
+    /* This applies to all sections in home page except the hero section */
     .section-title {
         font-size: var(--font-size-tablet-l);
     }
@@ -457,6 +457,7 @@ section p {
 /* Responsiveness for desktop */
 @media only screen and (min-width: 850px) {
     
+    /* This applies to all sections in home page except the hero section */
     .section-title {
         font-size: calc(var(--font-size-desktop-l) - 0.2em);
     }
@@ -473,6 +474,7 @@ section p {
 /* Responsiveness for landscape orientation of mobile phone */
 @media only screen and (orientation: landscape) and (max-height: 500px) {
     
+    /* This applies to all sections in home page except the hero section */
     .section-title {
         font-size: var(--font-size-mobile-l);
     }
@@ -795,6 +797,20 @@ section p {
     }
 }
 
+/* Responsiveness for landscape orientation of mobile phone */
+@media only screen and (orientation: landscape) and (max-height: 500px) {
+    .about h1, 
+    .blogs h1,
+    .project-page h1 {
+        font-size: var(--font-size-mobile-l);
+    }
+
+    .about h2, 
+    .blogs h2,
+    .project-page h2 {
+        font-size: var(--font-size-mobile-m);
+    }
+}
 
 /* Footer section */
 
