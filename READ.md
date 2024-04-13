@@ -149,7 +149,7 @@ I placed the greetings "Hello, I'm" on top of the profile photo to signify my co
 
 Hexagon is used to enclose my profile photo because I want it to be unique. The usual profile photo is enclosed in circle.
 
-My name has the largest font size followed by my role to give emphasis on me as an aspiring web developer.
+My name has the largest font size followed by my role to give emphasis on me as an aspiring web developer. I tried different font family from Google Fonts and Poppins is so far the nicest font appropriate in my website.
 
 Next are the call to action buttons for my Github and LinkedIn profiles. I chose color blue for it is captivating to the eye. When the users see it, they might be interested to click the buttons and discover my activities in Github and LinkedIn.
 
@@ -157,13 +157,9 @@ Blue is also the color in header section. The navigation is initially hidden and
 
 The logo is black to match the color of my name in hero section. The logo and the 'home' item in navigation menu are linked to home page.
 
-<img src="./markdown-images/screenshot-home-hero-tablet-desktop.jpg" alt="Hero section of home page in tablet and desktop screens" width="700px">
+<img src="./markdown-images/screenshot-home-hero-tablet-desktop.jpg" alt="Other sections in home page for mobile, tablet and desktop screens" width="700px">
 
-Both tablet and desktop screens display the navigation menu and the hamburger icon is hidden. Media queries are used to implement responsiveness.
-
-In tablet screen (first image above), the buttons are now arranged horizontally.
-
-In desktop screen (second image above), it has already two columns in order to adapt in the large viewport width. On the left is the profile photo while all texts are on the right. The order has also changed since the greetings "hello, I'm" is now placed after the profile photo.
+Both tablet and desktop screens display the navigation menu and the hamburger icon is hidden. Media queries are used to implement responsiveness. The hero section has two columns now. On the left is the profile photo while all texts are on the right. The order has also changed since the greetings "hello, I'm" is now placed after the profile photo.
 
 #### Other sections (projects, education, contact and footer)
 
@@ -173,7 +169,7 @@ The other sections in home page are shown above.
 
 The projects section has background of gradient colors and each project is enclosed in a box with rounded corners to give emphasis. Two representative projects are showcased with a short description about the project. Each project has links to its website and Github repository; so I retained the hyperlink decoration on the texts. The screenshot image also links to the project's website. There is also a link at the bottom that will redirect to the 'projects page' if the user wanted to see my portfolio.
 
-Other sections are the skills, education and contact information. The background colors are in alternate to make it good to the eye when reading each section. Icon images are added so that users can easily identify the items since they are already familiar with them (e.g., Git, HTML, CSS).
+Other sections are the skills, education and contact information. The background colors are in alternate to make it good to the eye when reading each section. I decided to add all tech stack (not just HTML and CSS as the current topics) that I will learn throughout the bootcamp. Icon images are added so that users can easily identify the items since they are already familiar with them (e.g., Git, HTML, CSS).
 
 A semantic address tag is used in the email address. If clicked, it will automatically open the email application for user's convenience. If the phone number is clicked (in mobile screen), it will automatically dial the number.
 
@@ -197,6 +193,21 @@ Unlike the projects page, there is only one column in blog page as it is appropr
 
 In each blog post, semantic tags are used in author, date and image using address, time and figure tags, respectively. Under each post has a link called "back to top" which is useful if the user wants to check again the list of titles at the beginning of the page.
 
+### About Page
+
+<img src="./markdown-images/screenshot-about-page.jpg" alt="Projects page in mobile, tablet and desktop screens" width="700px">
+
+In mobile screen, all contents are arranged in column. In tablet and desktop, there are already two columns. Furthermore, in work history and education sections, the h1 headings are placed on the left while all information are on the right. I used grid to layout the responsiveness in this page. For the desktop screen, I set a maximum width so that the contents will not stretch to the whole page.
+
+<img src="./markdown-images/screenshot-contact-page.jpg" alt="Projects page in mobile, tablet and desktop screens" width="700px">
+
+The contact page is simple, contents are displayed at the center of page. A semantic address tag is used in the email address. If clicked, it will automatically open the email application for user's convenience. If the phone number is clicked (in mobile screen), it will automatically dial the number.
+
+### Landscape Orientation for mobile screen
+
+<img src="./markdown-images/screenshot-landscape-hero.jpg" alt="Projects page in mobile, tablet and desktop screens" width="400px">
+
+<img src="./markdown-images/screenshot-landscape.jpg" alt="Projects page in mobile, tablet and desktop screens" width="700px">
 
 
 
