@@ -197,6 +197,8 @@ In each blog post, semantic tags are used in author, date and image using addres
 
 In mobile screen, all contents are arranged in column. Two columns for tablet and desktop. Furthermore, in work history and education sections, the h1 headings are placed on the left side while all information are on the right. I used grid to layout the responsiveness of this page. For the desktop screen, I set a maximum width so that the contents will not stretch to the whole page. In the interest section, I decided to add images and remove the bullet points in contrast to the wireframe.
 
+### Contact Page
+
 <img src="./markdown-images/screenshot-contact-page.jpg" alt="Projects page in mobile, tablet and desktop screens" width="700px">
 
 The contact page is simple, contents are displayed at the center of page. A semantic address tag is used in the email address. If clicked, it will automatically open the email application for user's convenience. If the phone number is clicked (in mobile screen), it will automatically dial the number.
