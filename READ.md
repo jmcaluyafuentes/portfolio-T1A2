@@ -121,11 +121,9 @@ The contact page is simple, it only shows my email address and phone number whic
 
 Generally in tablet screen, I want to increase the font sizes and images. I also want the 'projects' and 'about' pages to have two columns.
 
-In hero section of home page, I want the Github and LinkedIn buttons to line up in one row. In mobile screen, these buttons were arranged vertically.
-
 ### Desktop screen wireframe
 
-Since the screen is large now, I want the hero section to have two columns. The profile photo will be at left side while all texts will be at the right. This means that the order of greetings "Hello, I'm" will be changed.
+Since the screen is large now, I want the hero section to have two columns. The profile photo will be at the left side while all texts will be at the right. This means that the order of greetings "Hello, I'm" will be changed.
 
 For all pages, I will set a maximum limit for the width so that the contents will not stretch to the whole viewport width which is not good to the eye.
 
@@ -143,7 +141,7 @@ For all pages, I will set a maximum limit for the width so that the contents wil
 
 <img src="./markdown-images/screenshot-home-hero-mobile.jpg" alt="Hero section of home page in mobile screen" width="350px">
 
-The first image above shows the appearance of home page when the users (employers) visited my website.
+The first image above shows the appearance of home page when the users (employers) visits my website.
 
 I placed the greetings "Hello, I'm" on top of the profile photo to signify my courtesy and respect to the users. They will see right away a brief information about myself (i.e., complete name and my role as full stack web developer). These contents are centered on the hero section with good amount of white space to draw their attention to the main thing.
 
@@ -167,9 +165,9 @@ Both tablet and desktop screens display the navigation menu and the hamburger ic
 
 The other sections in home page are shown above.
 
-The projects section has background of gradient colors and each project is enclosed in a box with rounded corners to give emphasis. Two representative projects are showcased with a short description about the project. Each project has links to its website and Github repository; so I retained the hyperlink decoration on the texts. The screenshot image also links to the project's website. There is also a link at the bottom that will redirect to the 'projects page' if the user wanted to see my portfolio.
+The projects section has background of gradient colors and each project is enclosed in a box with rounded corners to give emphasis. Two representative projects are showcased with a short description about the project. Each project has links to its website and Github repository; so I retained the hyperlink decoration on the texts. The screenshot image also links to the project's website. There is also a link at the bottom that will redirect to the 'projects page' if the user wanted to see my other projects.
 
-Other sections are the skills, education and contact information. The background colors are in alternate to make it good to the eye when reading each section. I decided to add all tech stack (not just HTML and CSS as the current topics) that I will learn throughout the bootcamp. Icon images are added so that users can easily identify the items since they are already familiar with them (e.g., Git, HTML, CSS).
+Other sections are the skills, education and contact information. The background colors are in alternate to make it good to the eye when reading each section. I decided to add all tech stack (not just HTML and CSS as the current topics) that I will learn throughout the bootcamp. Icon images are added so that users can easily identify the items.
 
 A semantic address tag is used in the email address. If clicked, it will automatically open the email application for user's convenience. If the phone number is clicked (in mobile screen), it will automatically dial the number.
 
@@ -183,13 +181,13 @@ Lastly, the footer section has black background and white texts to contrast the 
 
 Six projects are shown in the 'projects' page. I used the Ed challenges on this
 
-At the early stage of making the project, I used Flexbox to layout the home page. Later on, our educator Matt gave us the opportunity to learn CSS Grid during the master class. So after that, I used grid on the rest of pages (i.e., projects, blog, about) to layout the whole page and just used flex in each grid item when necessary. I saved time by using grid in contrast to using flexbox in home page.
+At the early stage of making the project, I used Flexbox to layout the home page. Later on, our educator Matt gave us the opportunity to learn CSS Grid during the master class. So after that, I used grid for the rest of pages (i.e., projects, blog, about). It is easier to layout the whole page with grid and just use flexbox on grid items when necessary.
 
 ### Blog Page
 
 <img src="./markdown-images/screenshot-blog-page.jpg" alt="Projects page in mobile, tablet and desktop screens" width="700px">
 
-Unlike the projects page, there is only one column in blog page as it is appropriate in reading purposes. On top of the page are the list of five blog titles and their published dates. Each title is linked to its blog post on the same page for easy navigation. Semantic time tags are used for the published date.
+Unlike the projects page, there is only one column in blog page as it is appropriate for reading purposes. On top of the page are the list of five blog titles and their published dates. For easy navigation, each title is linked to its blog post on the same page. Semantic time tags are used for the published date.
 
 In each blog post, semantic tags are used in author, date and image using address, time and figure tags, respectively. Under each post has a link called "back to top" which is useful if the user wants to check again the list of titles at the beginning of the page.
 
@@ -197,7 +195,7 @@ In each blog post, semantic tags are used in author, date and image using addres
 
 <img src="./markdown-images/screenshot-about-page.jpg" alt="Projects page in mobile, tablet and desktop screens" width="700px">
 
-In mobile screen, all contents are arranged in column. In tablet and desktop, there are already two columns. Furthermore, in work history and education sections, the h1 headings are placed on the left while all information are on the right. I used grid to layout the responsiveness in this page. For the desktop screen, I set a maximum width so that the contents will not stretch to the whole page.
+In mobile screen, all contents are arranged in column. Two columns for tablet and desktop. Furthermore, in work history and education sections, the h1 headings are placed on the left side while all information are on the right. I used grid to layout the responsiveness of this page. For the desktop screen, I set a maximum width so that the contents will not stretch to the whole page. In the interest section, I decided to add images and remove the bullet points in contrast to the wireframe.
 
 <img src="./markdown-images/screenshot-contact-page.jpg" alt="Projects page in mobile, tablet and desktop screens" width="700px">
 
@@ -209,5 +207,5 @@ The contact page is simple, contents are displayed at the center of page. A sema
 
 <img src="./markdown-images/screenshot-landscape.jpg" alt="Projects page in mobile, tablet and desktop screens" width="700px">
 
-
+I added  media query for landscape orientation of mobile screen in case they are using their phones in landscape mode at the time they viewed my website.
 
